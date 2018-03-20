@@ -87,7 +87,6 @@ var FB = (function($) {
   // Public functions
   return {
     init: _init,
-    initHighcharts: _initHighcharts,
     resize: _resize,
     scrollBody: function(section, duration, delay) {
       _scrollBody(section, duration, delay);
