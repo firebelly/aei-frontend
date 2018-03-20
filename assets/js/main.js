@@ -5,11 +5,10 @@
 var FB = (function($) {
 
   var screen_width = 0,
-      breakpoint_small = false,
-      breakpoint_medium = false,
-      breakpoint_nav = false,
-      breakpoint_large = false,
-      breakpoint_array = [480,950,1020,1200]; // breakpoint_medium is intentionally 950 instead of 900 (its value in css)
+      breakpoint_xs = false,
+      breakpoint_sm = false,
+      breakpoint_md = false,
+      breakpoint_lg = false;
 
 
   function _init() {
@@ -69,10 +68,18 @@ var FB = (function($) {
   // Called in quick succession as window is resized
   function _resize() {
     screenWidth = document.documentElement.clientWidth;
-    breakpoint_small = (screenWidth >= breakpoint_array[0]);
-    breakpoint_medium = (screenWidth >= breakpoint_array[1]);
-    breakpoint_nav = (screenWidth >= breakpoint_array[2]);
-    breakpoint_large = (screenWidth >= breakpoint_array[3]);
+
+    // Check breakpoint indicator in DOM ( :after { content } is controlled by CSS media queries )
+    var breakpointIndicatorString = window.getComputedStyle(
+      document.querySelector('#breakpoint-indicator'), ':after'
+    ).getPropertyValue('content')
+    .replace(/['"]+/g, '');
+
+    // Determin current breakpoint
+    breakpoint_lg = breakpointIndicatorString === 'lg';
+    breakpoint_md = breakpointIndicatorString === 'md' || breakpoint_lg;
+    breakpoint_sm = breakpointIndicatorString === 'sm' || breakpoint_md;
+    breakpoint_xs = breakpointIndicatorString === 'xs' || breakpoint_sm;
   }
 
 
