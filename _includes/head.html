@@ -1,0 +1,32 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="canonical" href="{{ site.url }}">
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+  <meta property="og:image" content="hero-image.jpg" />
+
+  <link rel="stylesheet" href="{{ 'assets/css/main.min.css' | absolute_url }}">
+
+  <link rel="shortcut icon" type="image/ico" href="{{ 'assets/images/favicon.png' | absolute_url }}">
+
+  <!--[if lt IE 9]>
+    <script src="{{ 'assets/js/no-build/respond.min.js' | absolute_url }}"></script>
+    <script src="{{ 'assets/js/no-build/svg4everybody.legacy.min.js' | absolute_url }}"></script>
+  <![endif]-->
+  <script src="{{ 'assets/js/no-build/modernizr.custom.js' | absolute_url }}"></script>
+
+  <!-- Inject SVGs Defs for SVG icon use -->
+  <script>
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", "{{ 'assets/svgs/build/svgs-defs.svg' | absolute_url }}", true);
+    ajax.send();
+    ajax.onload = function(e) {
+      var div = document.createElement("div");
+      div.className += "svgs-defs";
+      div.innerHTML = ajax.responseText;
+      document.body.insertBefore(div, document.body.childNodes[0]);
+    }
+  </script> 
+</head>
