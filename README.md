@@ -1,5 +1,5 @@
-# AEI - Front end only
-Front-end static build
+# AEI - Front-end
+Front-end static build to be used for later integration with AEI CMS.
 
 ### Getting Started
 We're using [Jekyll](http://jekyllrb.com/) & [Gulp](http://gulpjs.com/) to build the front end of the COH site. 
@@ -43,43 +43,4 @@ We're using [Jekyll](http://jekyllrb.com/) & [Gulp](http://gulpjs.com/) to build
 |- /page-name           // Pages are organized in directories in the root by their page-name
     |- index.md         // They each get an index.md to handle the page content
     |- /child-page-name // Child pages follow the same convention  
-|- component-library.html   // A running file to style and add reusable components. Use this as a reference whene needed, and add components as they are established.
-```
-
-### Component Library
-
-We put together a simple component library to help display and explain the various visual compnents, how they're used, and where in the files their code is located. It's not at 100%, but hopefully it's helpful — view it at `/component-library`
-
-### Grid System
-
-I've put together a small grid system so that if components need to be dropped in at various rations then it should be pretty easy. The grid system is located in `assets/scss/helpers/_grid.scss`.
-
-Whenever you want to include elements as items in a grid then establish the container as a grid by giving it a class of `grid`:
-
-```
-<div class="grid">
-  <!-- grid items here -->
-</div>
-```
-
-The columns are class-based, and the convention is `col-` followed by a ratio, which is written as (for example) `1-2` for 1/2. 1/3 = `col-1-3`, 2/3 = `col-2-3`, etc.
-
-```
-<div class="grid">
-  <div class="col-1-2"></div>
-  <div class="col-1-2"></div>
-</div>
-```
-
-This will get you your columns floating right up against each other. If you need them to be spaced out you can add a `spaced` class to the `.grid` container. This will add padding to each column item, which means if you need your columns to be spaced out but they also have solid backgrounds you'll need to add an internal container (use the non-specific `-inner` class if nothing else makes sense) to handle the background color and content padding:
-
-```
-<div class="grid spaced">
-  <div class="col-1-3">
-    <div class="-inner"></div>
-  </div>
-  <div class="col-2-3">
-    <div class="-inner"></div>
-  </div>
-</div>
 ```
