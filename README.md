@@ -2,7 +2,7 @@
 Front-end static build to be used for later integration with AEI CMS.
 
 ### Getting Started
-We're using [Jekyll](http://jekyllrb.com/) & [Gulp](http://gulpjs.com/) to build the front end of the COH site. 
+We're using [Jekyll](http://jekyllrb.com/) & [Gulp](http://gulpjs.com/) to build the front end.
 
 1. Install Jekyll: `gem install jekyll`
 2. Clone This Repo
