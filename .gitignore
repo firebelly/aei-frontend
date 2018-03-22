@@ -12,6 +12,9 @@ node_modules
 # Assets
 assets/css
 
+# Fonts
+assets/fonts/protected
+
 # rbenv
 .gems
 assets/js/build

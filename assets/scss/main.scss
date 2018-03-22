@@ -10,6 +10,7 @@
 @import "helpers/grid";
 @import "helpers/animations";
 @import "helpers/accessibility";
+@import "helpers/color-scheme";
 @import "helpers/breakpoint-indicator";
 @import "helpers/ie";
 
@@ -17,6 +18,7 @@
 
 // Components
 @import "components/base";
+@import "components/layout";
 @import "components/header";
 @import "components/nav";
 @import "components/footer";

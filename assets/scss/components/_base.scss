@@ -7,6 +7,18 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  @include font-p;
+}
+
+a {
+  color: inherit;
+}
+
+.svgs-defs {
+  display: none;
+}
+
 .bigclicky {
   cursor: pointer;
 }

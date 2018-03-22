@@ -1,0 +1,70 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  @include media-lg {
+    display: flex;
+  }
+}
+
+.site-header {
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  padding: $padding;
+  position: absolute;
+  background: $concrete-light;
+  transform: translateX(-100%);
+  @include media-lg {
+    top: auto;
+    left: auto;
+    transform: none;
+    position: static;
+    flex-basis: 33.33%;
+  }
+}
+
+.site-wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding-left: $padding;
+
+
+  @include media-lg {
+    padding-left: 0;
+    flex-basis: 66.67%;
+  }
+
+  .site-main {
+    flex: 1;
+    @include clearfix;
+
+    .content-block {
+      float: left;
+      width: 100%;
+      height: 300px; // Temp for content-less dev
+      color: $white;
+      padding: $padding;
+
+      @include media-md {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.no-flexbox {
+
+  .site-header {
+    float: left;
+    width: 33.33%;
+  }
+
+  .site-wrapper {
+    float: left;
+    width: 66.67%;
+  }
+}

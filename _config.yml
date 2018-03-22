@@ -13,12 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: AEI
+title: Affiliated Engineers
+initialism: AEI
 email: developer@firebellydesign.com
 description: > # this means to ignore newlines until "baseurl:"
   Everyone deserves to live the healthiest life possible. Join the movement.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+social:
+  linkedin: 'https://www.linkedin.com/company/affiliated-engineers'
+  twitter: 'https://twitter.com/intent/follow?screen_name=@AEITweets'
+  instagram: 'https://www.instagram.com/affiliated_engineers/'
 
 # Build settings
 destination: _build
