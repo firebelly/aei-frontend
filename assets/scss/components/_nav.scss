@@ -1,4 +1,144 @@
 // Main Site Navigation
 
 .site-nav {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: fixed;
+  right: $padding;
+  min-height: 100%;
+  padding: $padding;
+  overflow-y: scroll;
+  background: $concrete-light;
+
+  @include max-screen ($breakpoint-lg - 1px) {
+     &:not(.-open) {
+      transform: translateX(-100%);
+    } 
+  }
+
+  @include media-lg {
+    top: auto;
+    left: auto;
+    z-index: 0;
+    transform: none;
+    position: static;
+    flex-basis: 33.33%;
+  }
+
+  .primary-links {
+    @include font-nav;
+    @include semantic-only-list;
+    margin-top: 15 * $beat;
+
+    @include media-lg {
+      margin-top: 34 * $beat;
+    }
+
+    .primary-links-item {
+      color: $white;
+      position: relative;
+
+      &.current a, a:hover {
+        color: $black;
+
+        &::after {
+          right: 0;
+          bottom: 3px;
+          content: '';
+          width: 11.1px;
+          height: 15.7px;
+          position: absolute;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image: url('../svgs/icon-right-arrow-soft-black.svg');
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .filters {
+    @include font-filter;
+    @include semantic-only-list;
+    margin: 10*$beat 0 0;
+
+    @include media-lg {
+      margin-top: 14*$beat;
+    }
+
+    .filters-item {
+      display: inline;
+
+      a {
+        color: $white;
+        text-decoration: none;
+
+        &::after {
+          content: '/';
+          color: $white;
+          margin-left: 0.8ch;
+          margin-right: 0.4ch;
+        }
+      }
+
+      &.current a, a:hover {
+        color: $black;
+      }
+
+      &:last-child {
+        a::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .secondary-links {
+    @include font-buttons;
+    @include semantic-only-list;
+    margin: 0;
+    top: $padding;
+    right: $padding;
+    position: absolute;
+
+    .secondary-links-item {
+      display: inline-block;
+
+      &:first-of-type {
+        margin-right: 3ch;
+      }
+
+      &.current a, a:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .toggle-search-open {
+    @include font-buttons;
+    top: $padding;
+    left: $padding;
+    position: absolute;
+
+    @include media-lg {
+      left: calc(33.33% + #{$padding});
+    }
+
+    .icon-search {
+      top: 3px;
+      fill: $black;
+      width: 10.5px;
+      height: 10.5px;
+      margin-left: $beat;
+      position: relative;
+    }
+  }
 }

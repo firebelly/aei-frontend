@@ -1,0 +1,29 @@
+<nav class="site-nav" role="navigation">
+  <ul class="primary-links">
+    {% for navItem in site.data.navigation.navItems.primary %}
+      <li class="primary-links-item {% if page.url contains navItem.path %} current{% endif %}">
+        <a href="{{ navItem.path }}">{{ navItem.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="filters">
+    {% for filter in page.filters %}
+      <li class="filters-item {% if page.url contains filter.path %} current{% endif %}">
+        <a href="{{ filter.path }}">{{ filter.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="secondary-links">
+    {% for navItem in site.data.navigation.navItems.secondary %}
+      <li class="secondary-links-item {% if page.url contains navItem.path %} current{% endif %}">
+        <a href="{{ navItem.path }}">{{ navItem.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="toggle-search-open">
+    Search <svg class="icon-search"><use xlink:href="#icon-search" /></svg>
+  </div>
+</nav>

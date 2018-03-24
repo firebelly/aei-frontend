@@ -1,37 +1,9 @@
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  @include media-lg {
-    display: flex;
-  }
-}
-
-.site-header {
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  padding: $padding;
-  position: absolute;
-  background: $concrete-light;
-  transform: translateX(-100%);
-  @include media-lg {
-    top: auto;
-    left: auto;
-    transform: none;
-    position: static;
-    flex-basis: 33.33%;
-  }
-}
-
 .site-wrapper {
   display: flex;
   min-height: 100%;
+  flex-basis: 100%;
   flex-direction: column;
   padding-left: $padding;
-
 
   @include media-lg {
     padding-left: 0;

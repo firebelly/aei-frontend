@@ -1,10 +1,16 @@
 # Manual Navigation Setup
 navItems:
-  - title: Expertise
-    path: /expertise/
-  - title: Impact
-    path: /impact/
-  - title: Approach
-    path: /approach/
-  - title: People
-    path: /people/
+  primary:
+    - title: Expertise
+      path: /expertise/
+    - title: Impact
+      path: /impact/
+    - title: Approach
+      path: /approach/
+    - title: People
+      path: /people/
+  secondary:
+    - title: Careers
+      path: /careers/
+    - title: Contact
+      path: /contact/
