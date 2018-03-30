@@ -1,13 +1,20 @@
 <header class="site-header" role="banner">
-    <div class="lockup bigclicky">
-      <div class="affiliated-engineers">
-        <h1 class="sr-only"><a href="/">{{ site.title }}</a></h1>
-        <svg class="logo"><use xlink:href="#affiliated-engineers-logo" /></svg>
-      </div>
-      <ul class="plan-design-commission">
-        <li>Plan</li>
-        <li>Design</li>
-        <li>Commission</li>
-      </ul>
+  <div class="lockup bigclicky">
+    <div class="affiliated-engineers">
+      <h1 class="sr-only"><a href="/">{{ site.title }}</a></h1>
+      <svg class="logo"><use xlink:href="#affiliated-engineers-logo" /></svg>
     </div>
+    <ul class="plan-design-commission">
+      <li>Plan</li>
+      <li>Design</li>
+      <li>Commission</li>
+    </ul>
+  </div>
+  <ul class="secondary-links">
+  {% for navItem in site.data.navigation.navItems.secondary %}
+    <li class="secondary-links-item {% if page.url contains navItem.path %} current{% endif %}">
+      <a href="{{ navItem.path }}">{{ navItem.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
 </header>

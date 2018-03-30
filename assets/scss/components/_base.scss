@@ -13,9 +13,7 @@ body {
   color: $black;
   @include font-p;
   min-height: 100%;
-  // height: 100%;
   background: $concrete-med;
-  display: flex;
 }
 
 a {

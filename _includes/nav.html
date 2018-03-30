@@ -1,4 +1,17 @@
 <nav class="site-nav" role="navigation">
+
+  <div class="lockup bigclicky">
+    <div class="affiliated-engineers">
+      <h1 class="sr-only"><a href="/">{{ site.title }}</a></h1>
+      <svg class="logo"><use xlink:href="#affiliated-engineers-logo" /></svg>
+    </div>
+    <ul class="plan-design-commission">
+      <li>Plan</li>
+      <li>Design</li>
+      <li>Commission</li>
+    </ul>
+  </div>
+
   <ul class="primary-links">
     {% for navItem in site.data.navigation.navItems.primary %}
       <li class="primary-links-item {% if page.url contains navItem.path %} current{% endif %}">
@@ -27,3 +40,6 @@
     Search <svg class="icon-search"><use xlink:href="#icon-search" /></svg>
   </div>
 </nav>
+
+<div class="nav-open"></div>
+<div class="nav-close"></div>

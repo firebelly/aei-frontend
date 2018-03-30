@@ -15,8 +15,9 @@ var FB = (function($) {
     // Cache some common DOM queries
     $document = $(document);
     $header = $('.site-header');
+    $body = $('body');
     $nav = $('.site-nav');
-    $('body').addClass('loaded');
+    $body.addClass('loaded');
 
     // Set screen size vars
     _resize();
@@ -27,7 +28,7 @@ var FB = (function($) {
     // Esc handlers
     $(document).keyup(function(e) {
       if (e.keyCode === 27) {
-
+        _closeNav();
       }
     });
 
@@ -61,9 +62,42 @@ var FB = (function($) {
       }
     });
 
+    _initNav();
+
 
   } // end init()
 
+  function _initNav() {
+
+    _closeNav();
+    $(document).on('click','.nav-close', function () {
+      _closeNav();
+    });
+    $(document).on('click','.nav-open', function () {
+      _openNav();
+    });
+    $(document).on('click','.nav-toggle', function () {
+      _toggleNav();
+    });
+
+  }
+  function _openNav() {
+    $body
+      .addClass('site-nav-open')
+      .removeClass('site-nav-closed');
+  }
+  function _closeNav() {
+    $body
+      .removeClass('site-nav-open')
+      .addClass('site-nav-closed');
+  }
+  function _toggleNav() {
+    if($body.hasClass('site-nav-open')) {
+      _closeNav();
+    } else {
+      _openNav();
+    }
+  }
 
   // Called in quick succession as window is resized
   function _resize() {
