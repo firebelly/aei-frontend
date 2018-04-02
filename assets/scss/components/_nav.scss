@@ -34,7 +34,7 @@
     width: 33.33%;
     display: flex;
     transition: none;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     flex-direction: column;
 
     .secondary-links, .search-open {
@@ -204,7 +204,17 @@
   @include media-lg {
     display: none;
   }
+
+  .icon-x {
+    top: 38.7px;
+    right: 14.7px;
+    width: 10.7px;
+    height: 10.7px;
+    position: absolute;
+    fill: $concrete-light;
+  }
 }
+
 .nav-open {
   top: 0;
   left: 0;
@@ -216,6 +226,15 @@
 
   @include media-lg {
     display: none;
+  }
+
+  .icon-hamburger {
+    top: 41px;
+    left: 14px;
+    width: 12px;
+    height: 6px;
+    fill: $black;
+    position: absolute;
   }
 }
 

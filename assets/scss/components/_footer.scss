@@ -25,6 +25,7 @@
 
   .social-list {
     @include font-p;
+    @include font-smoothing;
     @include semantic-only-list;
     margin: 0;
     color: $concrete-light;
@@ -45,6 +46,12 @@
 
     a {
       text-decoration: none;
+      &:hover {
+        color: $white;
+        .icon {
+          fill: $white;
+        }
+      }
     }
   }
 }

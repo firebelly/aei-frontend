@@ -27,6 +27,11 @@
     .secondary-links, .search-open {
       display: block;
     }
+
+    .secondary-links a {
+      color: $white;
+      @include font-smoothing;
+    }
   }
 }
 
