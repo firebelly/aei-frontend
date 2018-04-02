@@ -4,16 +4,28 @@
   padding: $padding;
   background: $white;
 
+
+  .secondary-links, .search-open {
+    display: none;
+  }
+
   @include media-md {
     width: 50%;
   }
-  
+
   @include media-lg {
+
     left: 33.33%;
+    width: 66.67%;
     position: absolute;
     background: transparent;
+
     .lockup {
       display: none;
+    }
+
+    .secondary-links, .search-open {
+      display: block;
     }
   }
 }

@@ -1,0 +1,7 @@
+.corner-button {
+  @include font-buttons;
+  @include corner-button(4px);
+
+  text-align: left;
+  text-decoration: none;
+}

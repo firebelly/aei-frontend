@@ -33,3 +33,96 @@ filters:
   - title: Sports & Athletic Centers
     path: /expertise/sports-and-athletic-centers/
 ---
+<div class="masonry-grid">
+  <div class="masonry-sizer"></div>
+  <div class="masonry-item page-description">
+    <p>Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+    <div class="buttons">
+      <button class="contacts-open corner-button">Contacts<i></i></button>
+      <a class="corner-button" href="/awards/">Awards<i></i></a>
+    </div>
+  </div>
+  <ul class="semantic-only-list">
+    <li class="masonry-item">
+      <article class="project-module -wide">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -wide">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -wide">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -tall">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -wide">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="stat-module">
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -wide">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+    <li class="masonry-item">
+      <article class="project-module -tall">
+        <div class="thumb-wrap">
+          <div class="thumb" style="background-image: url('');"></div>
+        </div>
+        <div class="title">
+          <h1>North Carolina State University</h1>
+          <h2>James B. Hunt Jr. Library</h2>
+        </div>
+      </article>
+    </li>
+  </ul>
+</div>

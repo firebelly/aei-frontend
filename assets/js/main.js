@@ -63,6 +63,7 @@ var FB = (function($) {
     });
 
     _initNav();
+    _initMasonry();
 
 
   } // end init()
@@ -116,7 +117,19 @@ var FB = (function($) {
     breakpoint_xs = breakpointIndicatorString === 'xs' || breakpoint_sm;
   }
 
-
+  function _initMasonry() {
+    if($('.masonry-grid').length) {
+      $('.masonry-grid').isotope({
+        itemSelector: '.masonry-item',
+        percentPosition: true,
+        transitionDuration: 0,
+        masonry: {
+          // use outer width of grid-sizer for columnWidth
+          columnWidth: '.masonry-sizer',
+        }
+      });
+    }
+  }
 
   // Public functions
   return {

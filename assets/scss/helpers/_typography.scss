@@ -63,7 +63,7 @@
 .formular-bold { @include formular-bold; }
 .formular-mono { @include formular-mono; }
 
-// Mixin for handling font sizes + line heights quickly 
+// Mixin for handling font sizes + line heights quickly
 @mixin font-size ($size, $lh) {
   font-size: #{$size}px;
   line-height: ($lh / $size);
@@ -84,7 +84,10 @@
 
 @mixin font-h1 {
   @include formular-regular;
-  @include paragraph-style (33, 40, $ls: -.025em);
+  @include paragraph-style (22, 32, $ls: -.025em);
+  @include media-lg {
+    @include paragraph-style (33, 40, $ls: -.025em);
+  }
 }
 
 @mixin font-h2 {
@@ -136,7 +139,6 @@
   @include paragraph-style (12, 24, $ls: -.025em);
 }
 
-
 .font-p { @include font-p; }
 .font-h1 { @include font-h1; }
 .font-h2 { @include font-h2; }
@@ -149,4 +151,3 @@
 .font-stat-medium { @include font-stat-medium; }
 .font-stat-small { @include font-stat-small; }
 .font-copyright { @include font-copyright; }
-

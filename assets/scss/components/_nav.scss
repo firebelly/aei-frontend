@@ -16,7 +16,7 @@
 .site-nav {
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   height: 100%;
   position: fixed;
   right: $padding;
@@ -36,6 +36,10 @@
     transition: none;
     overflow-y: hidden;
     flex-direction: column;
+
+    .secondary-links, .search-open {
+      display: none;
+    }
   }
 
   .lockup {
@@ -61,16 +65,6 @@
       justify-content: center;
 
       flex-basis: 38*$beat;
-      // flex-basis: 24*$beat;
-      // @include min-screen-height (770px) {
-      //   flex-basis: 28*$beat;
-      // }
-      // @include min-screen-height (810px) {
-      //   flex-basis: 33*$beat;
-      // }
-      // @include min-screen-height (850px) {
-      //   flex-basis: 38*$beat;
-      // }
     }
 
     .primary-links-item {
@@ -152,16 +146,14 @@
   @include font-buttons;
   @include semantic-only-list;
   margin: 0;
+  z-index: 1;
   top: $padding;
   right: $padding;
   position: absolute;
 
-  @include media-lg {
-    display: none;
-  }
-
   .secondary-links-item {
     display: block;
+    margin-bottom: $beat;
 
     @include min-screen(430px) {
       display: inline-block;
@@ -181,16 +173,12 @@
   }
 }
 
-.toggle-search-open {
+.search-open {
   @include font-buttons;
+  z-index: 1;
   top: $padding;
   left: $padding;
   position: absolute;
-
-  @include media-lg {
-    display: none;
-    left: calc(33.33% + #{$padding});
-  }
 
   .icon-search {
     top: 3px;
@@ -205,6 +193,7 @@
 .nav-close {
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -224,7 +213,7 @@
   width: $padding;
   cursor: pointer;
   background-color: $concrete-light;
-  
+
   @include media-lg {
     display: none;
   }
@@ -239,7 +228,7 @@
       opacity: 0;
       pointer-events: none;
     }
-  } 
+  }
   body.site-nav-open {
     overflow: hidden;
   }

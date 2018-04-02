@@ -73,3 +73,44 @@
     @content;
   }
 }
+
+@mixin corner-button($width) {
+  display: inline-block;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(#{$width} 0%, calc(100% - #{$width}) 0%, 100% #{$width}, 100% calc(100% - #{$width}), calc(100% - #{$width}) 100%, #{$width} 100%, 0% calc(100% - #{$width}), 0% #{$width});
+  i:after,
+  i:before,
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -#{$width / 2};
+    width: $width * 2;
+    border-top: 1px solid #333;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    left: auto;
+    right: -#{$width / 2};
+    transform: rotate(45deg);
+  }
+  i:before,
+  i:after {
+    top: auto;
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  i:after {
+    left: auto;
+    right: -#{$width / 2};
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    color: red;
+    border-color: blue;
+  }
+}

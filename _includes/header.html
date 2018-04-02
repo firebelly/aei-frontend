@@ -10,6 +10,9 @@
       <li>Commission</li>
     </ul>
   </div>
+  <div class="search-open">
+    Search <svg class="icon-search"><use xlink:href="#icon-search" /></svg>
+  </div>
   <ul class="secondary-links">
   {% for navItem in site.data.navigation.navItems.secondary %}
     <li class="secondary-links-item {% if page.url contains navItem.path %} current{% endif %}">
