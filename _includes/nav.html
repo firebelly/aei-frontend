@@ -12,7 +12,7 @@
     </ul>
   </div>
 
-  <ul class="primary-links">
+  <ul class="primary-links semantic-only-list">
     {% for navItem in site.data.navigation.navItems.primary %}
       <li class="primary-links-item {% if page.url contains navItem.path %} current{% endif %}">
         <a href="{{ navItem.path }}">{{ navItem.title }}</a>
@@ -20,7 +20,7 @@
     {% endfor %}
   </ul>
 
-  <ul class="filters">
+  <ul class="filters semantic-only-list">
     {% for filter in page.filters %}
       <li class="filters-item {% if page.url contains filter.path %} current{% endif %}">
         <a href="{{ filter.path }}">{{ filter.title }}</a>
@@ -28,7 +28,7 @@
     {% endfor %}
   </ul>
 
-  <ul class="secondary-links">
+  <ul class="secondary-links semantic-only-list">
     {% for navItem in site.data.navigation.navItems.secondary %}
       <li class="secondary-links-item {% if page.url contains navItem.path %} current{% endif %}">
         <a href="{{ navItem.path }}">{{ navItem.title }}</a>

@@ -24,4 +24,44 @@ filters:
     path: /impact/project-performance/
   - title: Tech Talk
     path: /impact/tech-talk/
+
+modules:
+  - type: post
+    title: Short Post Title
+    category: Announcement
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: post
+    title: Some Post Titles Will Be Quite a Bit Longer Than Others
+    category: Article
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: post
+    title: Short Post Title
+    category: Tech Talk
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: post
+    title: Short Post Title
+    category: Article
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: post
+    title: Some Post Titles Will Be Quite a Bit Longer Than Others
+    category: Article
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: stat
+    number: 38k
+    unit: 
+    text: Callout Stat or Key Feature
+
 ---
+
+<ul class="row -separators semantic-only-list">
+  {% for module in page.modules %}
+    <li class="row-block">
+      {% include modules/{{ module.type }}.html %}
+    </li>
+  {% endfor %}
+</ul>

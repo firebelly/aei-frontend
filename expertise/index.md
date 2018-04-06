@@ -1,6 +1,7 @@
 ---
 title: Expertise
 layout: base
+bodyClasses: 'page-expertise'
 
 filters:
   - title: All
@@ -36,74 +37,100 @@ filters:
 
 modules:
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
-    thumb: placeholder-project-thumb1.jpg 
+    thumb: /uploads/placeholder-project-thumb1.jpg 
     aspectRatio: landscape 
     color: blue
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
-    thumb: placeholder-project-thumb2.jpg
+    thumb: /uploads/placeholder-project-thumb2.jpg
     aspectRatio: landscape 
     color: black
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
-    thumb: placeholder-project-thumb3.jpg
+    thumb: /uploads/placeholder-project-thumb3.jpg
     aspectRatio: landscape 
     color: black
   - type: stat
-    number1: 38k
+    number: 38k
+    unit: 
     text: Total Sq Ft Of LEED Certified Buildings
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: Stanford University
     subtitle: Stanford Energy Systems Innovations
-    thumb: placeholder-project-thumb4.jpg
+    thumb: /uploads/placeholder-project-thumb4.jpg
     aspectRatio: portrait 
     color: green
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: University of Washington
     subtitle:  Molecular Engineering & Sciences Building
-    thumb: placeholder-project-thumb5.jpg
+    thumb: /uploads/placeholder-project-thumb5.jpg
     aspectRatio: landscape 
     color: brass
   - type: stat
-    number1: 70%
+    number: 70
+    unit: '%'
     text: Total Sq Ft Of LEED Certified Buildings
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
-    thumb: placeholder-project-thumb1.jpg
+    thumb: /uploads/placeholder-project-thumb1.jpg
     aspectRatio: landscape
     color: black
   - type: project
+    permalink: /projects/north-carolina-state-university
     title: Ann & Robert H. Lurie Children’s Hospital Of Chicago
     subtitle: Stanford Energy Systems Innovations
-    thumb: placeholder-project-thumb6.jpg
+    thumb: /uploads/placeholder-project-thumb6.jpg
     aspectRatio: portrait
     color: violet
 ---
-<div class="masonry-grid">
-  <div class="masonry-sizer"></div>
-  <div class="masonry-item page-description">
-    <p>Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-    <div class="buttons">
-      <button class="contacts-open corner-button button">
-        <span>Contacts</span>
-        <svg class="icon icon-plus "><use xlink:href="#icon-plus" /></svg>
-      </button>
-      <a class="corner-button button" href="/awards/">
-        <span>Awards</span>
-        <svg class="icon icon-right-arrow"><use xlink:href="#icon-right-arrow" /></svg>
-      </a>
+<div class="row top-row">
+  <div class="row-block">
+    <div class="module text-module background-white text-black">
+      <p class="font-h1">Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <div class="buttons">
+        <button class="contacts-open button">
+          <span class="border"></span><span class="extra-corners"></span>
+          Contacts
+          <svg class="icon icon-plus "><use xlink:href="#icon-plus" /></svg>
+        </button>
+        <a class="button" href="/awards/">
+          <span class="border"></span><span class="extra-corners"></span>
+          Awards
+          <svg class="icon icon-right-arrow"><use xlink:href="#icon-right-arrow" /></svg>
+        </a>
+      </div>
     </div>
   </div>
+  {% for module in page.modules %}
+    {% if forloop.first != true %}{% break %}{% endif %}
+    <div class="row-block">
+      {% include modules/{{ module.type }}.html %}
+    </div>
+  {% endfor %}
+</div>
+<div class="masonry-grid">
+  <div class="masonry-sizer"></div>
   <ul class="semantic-only-list">
     {% for module in page.modules %}
-    <li class="masonry-item">
-      {% include modules/{{ module.type }}.html %}
-    </li>
+      {% if forloop.first %}{% continue %}{% endif %}
+      <li class="masonry-item">
+        {% include modules/{{ module.type }}.html %}
+      </li>
     {% endfor %}
   </ul>
 </div>
+
+
+
+
