@@ -94,7 +94,7 @@ modules:
     aspectRatio: portrait
     color: violet
 ---
-<div class="row top-row">
+<div class="row">
   <div class="row-block">
     <div class="module text-module background-white text-black">
       <p class="font-h1">Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>

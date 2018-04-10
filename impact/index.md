@@ -1,6 +1,7 @@
 ---
 title: Impact
 layout: base
+bodyClasses: 'page-impact overlapping-header'
 filters:
   - title: All
     path: /impact/
@@ -24,6 +25,15 @@ filters:
     path: /impact/project-performance/
   - title: Tech Talk
     path: /impact/tech-talk/
+
+heroImageUrl: /uploads/impact-hero.jpg
+
+featuredModule:
+  - type: post
+    title: Featured Post Title
+    category: Client Impact
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
 
 modules:
   - type: post
@@ -55,12 +65,33 @@ modules:
     number: 38k
     unit: 
     text: Callout Stat or Key Feature
+  - type: post
+    title: Short Post Title
+    category: Announcement
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
+  - type: post
+    title: Short Post Title
+    category: Announcement
+    excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
+    permalink: #
 
 ---
-
+<div class="hero-wrap">
+  <div class="hero-image">
+    <div class="thumb" style="background-image: url({{ page.heroImageUrl }});"></div>
+  </div>
+  <div class="row">
+    {% for module in page.featuredModule %}
+      <li class="row-block -right background-black text-off-white font-smoothing featured-post-block">
+        {% include modules/{{ module.type }}.html %}
+      </li>
+    {% endfor %}
+  </div>
+</div>
 <ul class="row -separators semantic-only-list">
   {% for module in page.modules %}
-    <li class="row-block">
+    <li class="row-block background-white text-black">
       {% include modules/{{ module.type }}.html %}
     </li>
   {% endfor %}

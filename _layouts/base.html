@@ -9,15 +9,20 @@
 
     {% include nav.html %}
 
-    <div class="site-wrapper">
-      {% include header.html %}
-      <main class="site-main" role="main">
+    <div class="right-col-wrap">
+      <div class="right-col">
 
-        {{ content }}
+        {% include header.html %}
 
-      </main>
+        <main class="site-main" role="main">
 
-      {% include footer.html %}
+          {{ content }}
+
+        </main>
+
+        {% include footer.html %}
+
+      </div>
     </div>
 
   </body>

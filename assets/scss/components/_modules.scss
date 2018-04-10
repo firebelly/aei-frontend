@@ -234,6 +234,10 @@ button {
     color: $red;
   }
   .title {
+    margin: 5px 0;
     @include font-nav;
+  }
+  .excerpt {
+    margin: 4.5*$beat 0 5.5*$beat;
   }
 }

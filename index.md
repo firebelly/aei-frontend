@@ -32,23 +32,21 @@ peopleThumb: /uploads/people.jpg
 
 
 ---
-<div class="thumb" style="background-image: url({{ page.heroImageUrl }});">
-  <div class="row">
-    <div class="row-block">
-      <div class="module text-module background-white text-black">
-        <p class="font-h1">{{ page.headline }}</p>
-        <div class="buttons">
-          <a class="button" href="/awards/">
-            <span class="border"></span><span class="extra-corners"></span>
-            Play Video
-            <svg class="icon icon-triangle"><use xlink:href="#icon-triangle" /></svg>
-          </a>
-        </div>
+<div class="row bg-image" style="background-image: url({{ page.heroImageUrl }});">
+  <div class="row-block">
+    <div class="module text-module background-white text-black">
+      <p class="font-h1">{{ page.headline }}</p>
+      <div class="buttons">
+        <a class="button" href="/awards/">
+          <span class="border"></span><span class="extra-corners"></span>
+          Play Video
+          <svg class="icon icon-triangle"><use xlink:href="#icon-triangle" /></svg>
+        </a>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="row-block -push-right">
+    <div class="row-block -right">
       <div class="text-module background-black text-off-white font-smoothing">
         <p>{{ page.supportingStatement }}</p>
       </div>
@@ -95,7 +93,7 @@ peopleThumb: /uploads/people.jpg
 </div>
 <ul class="row -separators semantic-only-list">
   {% for module in page.posts %}
-    <li class="row-block">
+    <li class="row-block background-white text-black">
       {% include modules/post.html %}
     </li>
   {% endfor %}

@@ -42,6 +42,20 @@
     }
   }
 
+  .search-open {
+    z-index: 1;
+    top: $padding;
+    left: $padding;
+    position: absolute;
+  }
+
+  .secondary-links {
+    z-index: 1;
+    top: $padding;
+    right: $padding;
+    position: absolute;
+  }
+
   .lockup {
     display: none;
     @include media-lg {
@@ -146,11 +160,6 @@
 .secondary-links {
   @include font-buttons;
   @include semantic-only-list;
-  margin: 0;
-  z-index: 1;
-  top: $padding;
-  right: $padding;
-  position: absolute;
 
   .secondary-links-item {
     display: block;
@@ -176,10 +185,6 @@
 
 .search-open {
   @include font-buttons;
-  z-index: 1;
-  top: $padding;
-  left: $padding;
-  position: absolute;
 
   .icon-search {
     top: 3px;
