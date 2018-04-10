@@ -51,6 +51,15 @@ body.overlapping-header {
   }
 }
 
+body.white-header {
+  .site-header {
+    background-color: $white;
+  }
+  .secondary-links a {
+    color: $black;
+  }
+}
+
 
 
 .lockup {

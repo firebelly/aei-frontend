@@ -1,7 +1,9 @@
-<article class="module person-module">
+<article class="module person-module background-white text-black">
     <div class="photo">
-      <div class="thumb" style="background-image: url('{{ module.photoUrl }}')"></div>
+      <div class="thumb bg-cover fill" style="background-image: url('{{ module.photoUrl }}')"></div>
     </div>
-    <h1 class="name"><a href="{{ module.permalink }}">{{ module.name }}</a></h1>
-    <h2 class="title">{{ module.title }}</h2>
+    <div class="text bigclicky">
+      <h1 class="name"><a href="{{ module.permalink }}">{{ module.name }}</a></h1>
+      <h2 class="title">{{ module.title }}</h2>
+    </div>
 </article>

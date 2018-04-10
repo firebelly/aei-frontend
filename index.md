@@ -30,22 +30,32 @@ posts:
 peopleTeaser: Culture messaging — Careers focused. Aenean eu leo quam. Ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non.
 peopleThumb: /uploads/people.jpg
 
+vimeoId: 194104576
+
 
 ---
-<div class="row bg-image" style="background-image: url({{ page.heroImageUrl }});">
-  <div class="row-block">
-    <div class="module text-module background-white text-black">
-      <p class="font-h1">{{ page.headline }}</p>
-      <div class="buttons">
-        <a class="button" href="/awards/">
-          <span class="border"></span><span class="extra-corners"></span>
-          Play Video
-          <svg class="icon icon-triangle"><use xlink:href="#icon-triangle" /></svg>
-        </a>
+<div class="theater-wrap">
+  <div class="row theater-cover-top">
+    <div class="row-block">
+      <div class="module text-module background-white text-black">
+        <p class="font-h1 no-margin">{{ page.headline }}</p>
+        <div class="buttons show-md">
+          <button class="button theater-open">
+            <span class="border"></span><span class="extra-corners"></span>
+            Play Video
+            <svg class="icon icon-triangle"><use xlink:href="#icon-triangle" /></svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="theater">
+    <div class="fluid-width-video-wrapper fill">
+        <iframe class="vimeo-iframe" src="https://player.vimeo.com/video/{{ page.vimeoId }}?background=1&autoplay=0&loop=0&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="theater-mask thumb bg-cover fill" style="background-image: url({{ page.heroImageUrl }});"></div>
+  </div>
+  <div class="row theater-cover-bottom">
     <div class="row-block -right">
       <div class="text-module background-black text-off-white font-smoothing">
         <p>{{ page.supportingStatement }}</p>

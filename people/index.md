@@ -1,6 +1,10 @@
 ---
 title: People
 layout: base
+
+bodyClasses: people-page white-header
+
+
 filters:
   - title: All
     path: /people/
@@ -92,9 +96,6 @@ people:
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person5.jpg
-  - name: Firstname Lastname
-    title: Title
-    photoUrl: /uploads/person6.jpg
 ---
 
 <div class="row">
@@ -116,9 +117,9 @@ people:
     </div>
   {% endfor %}
 </div>
-<ul class="row semantic-only-list">
+<ul class="row people-row semantic-only-list">
   {% for module in page.people %}
-    <li class="row-block -quarter">
+    <li class="row-block">
       {% include modules/person.html %}
     </li>
   {% endfor %}

@@ -241,3 +241,110 @@ button {
     margin: 4.5*$beat 0 5.5*$beat;
   }
 }
+
+.person-module {
+  position: relative;
+
+  .photo {
+    height: 0;
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  .text {
+    padding: $padding;
+    position: relative;
+
+    &::after {
+      right: 0;
+      width: 1px;
+      content: '';
+      top: $padding;
+      bottom: $padding;
+      position: absolute;
+      background: $off-white;
+    }
+
+    .name {
+      @include font-p;
+      margin: 0;
+    }
+
+    .title {
+      @include font-details;
+      margin: 6px 0 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+$breakpoint-people-2: 550px;
+$breakpoint-people-4: 900px;
+.people-row {
+
+  @include max-screen(($breakpoint-people-2 - 1px)) {
+    .person-module .text::after { display: none; }
+  }
+  @include screen($breakpoint-people-2, ($breakpoint-people-4 - 1px)) {
+    .row-block {
+      flex-basis: 50%;
+
+      &:nth-child(even), &:last-child {
+        .person-module .text::after { display: none; }
+      }
+    }
+  }
+  @include min-screen($breakpoint-people-4) {
+    .row-block {
+      flex-basis: 25%;
+
+      &:nth-child(4n), &:last-child {
+        .person-module .text::after { display: none; }
+      }
+    }
+  }
+}
+
+.stat-two-number-module {
+  display: flex;
+  padding: $padding;
+  background: $white;
+  position: relative;
+  justify-content: space-between;
+
+  &::after {
+    right: 50%;
+    width: 2px;
+    content: '';
+    top: $padding;
+    bottom: $padding;
+    position: absolute;
+    transform: skew(-18deg);
+    background-color: $concrete-light;
+  }
+
+  .number {
+    @include font-stat-small;
+    margin: 0;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+
+    @include min-screen(450px) {
+
+      @include font-stat-medium;
+    }
+  }
+  .unit {
+    @include font-details;
+    display: block;
+    margin: $beat 0 0;
+  }
+
+  .number-2 {
+    align-self: flex-end;
+    text-align: right;
+  }
+}
