@@ -11,7 +11,7 @@ supportingStatement: Supporting statement about AEI, ideally benefits-focused. M
 
 projectTeaser: First of its kind energy system. 70% more efficient and cutting carbon by well over half.
 projectPermalink: #
-projectThumb: /uploads/placeholder-project-image4.jpg
+projectThumb: /uploads/placeholder-project-thumb4.jpg
 projectColor: 'green'
 
 approachTeaser: Culture messaging — Approach focused. Aenean eu leo quam. Ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non.
