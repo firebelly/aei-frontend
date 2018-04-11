@@ -6,8 +6,6 @@
     padding-left: 33.33%;
   }
 
-
-
   .right-col {
     display: flex;
     min-height: 100vh;
@@ -31,58 +29,29 @@
 
     @include media-md {
       flex-basis: 50%;
+    }
 
-      &.-right {
+    &.-right {
+      @include media-md {
         margin-left: 50%;
       }
+    }
 
-      &.-quarter {
-        flex-basis: 25%;
-      }
-
-      .module {
-        min-height: 100%;
-      }
+    .module {
+      min-height: 100%;
     }
   }
 
-  &.-separators {
+  &.-quarters {
     .row-block {
-      position: relative;
+      flex-basis: 100%;
 
-      &::after {
-        bottom: 0;
-        height: 1px;
-        content: '';
-        left: $padding;
-        right: $padding;
-        position: absolute;
-        background: $off-white;
+      @include min-screen($breakpoint-quarters-2col) {
+        flex-basis: 50%;
       }
 
-      @include media-md {
-        &:nth-child(odd){
-          &::after {
-            right: 0;
-            left: auto;
-            width: 1px;
-            height: auto;
-            top: $padding;
-            bottom: $padding;
-          }
-        }
-
-        &:nth-child(even){
-          &::after {
-            left: calc(-100% + #{$padding})
-          }
-        }
-
-        &:last-child {
-          &::after {
-            display: none;
-          }
-        }
+      @include min-screen($breakpoint-quarters-4col) {
+        flex-basis: 25%;
       }
     }
   }
@@ -122,7 +91,7 @@
       position: absolute;
     }
 
-    .thumb {
+    .image {
       @extend .bg-cover;
       top: 0;
       left: 0;
@@ -134,7 +103,7 @@
   }
 }
 
-.theater-wrap {
+.checkerboard-header {
   position: relative;
   overflow: hidden;
 
@@ -151,7 +120,11 @@
     min-height: calc((66.67vw)*9/16);
   }
 
-  .theater {
+  .row {
+    z-index: 1;
+  }
+
+  .checkerboard-hero {
     height: 0; 
     position: relative;
     padding-bottom: 100% * 9/16; // aspect ratio block on mobile
@@ -161,7 +134,9 @@
       padding: 0;
     }
   }
+}
 
+.theater-wrap {
   .theater-cover-top, .theater-cover-bottom {
     z-index: 1;
     transition: transform 0.3s 0.3s;

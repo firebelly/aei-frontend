@@ -11,7 +11,7 @@ supportingStatement: Supporting statement about AEI, ideally benefits-focused. M
 
 projectTeaser: First of its kind energy system. 70% more efficient and cutting carbon by well over half.
 projectPermalink: #
-projectThumb: /uploads/placeholder-project-thumb4.jpg
+projectThumb: /uploads/placeholder-project-image4.jpg
 projectColor: 'green'
 
 approachTeaser: Culture messaging — Approach focused. Aenean eu leo quam. Ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non.
@@ -34,10 +34,10 @@ vimeoId: 194104576
 
 
 ---
-<div class="theater-wrap">
+<div class="checkerboard-header theater-wrap">
   <div class="row theater-cover-top">
     <div class="row-block">
-      <div class="module text-module background-white text-black">
+      <div class="module text-module background-white text-black pull-h1-to-top">
         <p class="font-h1 no-margin">{{ page.headline }}</p>
         <div class="buttons show-md">
           <button class="button theater-open">
@@ -49,11 +49,11 @@ vimeoId: 194104576
       </div>
     </div>
   </div>
-  <div class="theater">
+  <div class="checkerboard-hero theater">
     <div class="fluid-width-video-wrapper fill">
         <iframe class="vimeo-iframe" src="https://player.vimeo.com/video/{{ page.vimeoId }}?background=1&autoplay=0&loop=0&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
-    <div class="theater-mask thumb bg-cover fill" style="background-image: url({{ page.heroImageUrl }});"></div>
+    <div class="theater-mask image bg-cover fill" style="background-image: url({{ page.heroImageUrl }});"></div>
   </div>
   <div class="row theater-cover-bottom">
     <div class="row-block -right">
@@ -65,8 +65,8 @@ vimeoId: 194104576
 </div>
 <div class="row -flip-order-md">
   <div class="row-block">
-    <div class="module image-module -landscape -portrait-md">
-      <div class="thumb" style="background-image: url('{{ page.projectThumb }}');"></div>
+    <div class="module image-module image-wrap -landscape -portrait-md">
+      <div class="image" style="background-image: url('{{ page.projectThumb }}');"></div>
     </div>
   </div>
   <div class="row-block">
@@ -84,8 +84,8 @@ vimeoId: 194104576
 </div>
 <div class="row">
   <div class="row-block">
-    <div class="module image-module -landscape -portrait-md">
-      <div class="thumb" style="background-image: url('{{ page.approachThumb }}');"></div>
+    <div class="module image-module image-wrap -landscape -portrait-md">
+      <div class="image" style="background-image: url('{{ page.approachThumb }}');"></div>
     </div>
   </div>
   <div class="row-block">
@@ -101,17 +101,17 @@ vimeoId: 194104576
     </div>
   </div>
 </div>
-<ul class="row -separators semantic-only-list">
+<ul class="row semantic-only-list">
   {% for module in page.posts %}
-    <li class="row-block background-white text-black">
+    <li class="row-block background-white text-black post-separator">
       {% include modules/post.html %}
     </li>
   {% endfor %}
 </ul>
 <div class="row -flip-order-md">
   <div class="row-block">
-    <div class="module image-module -landscape -portrait-md">
-      <div class="thumb" style="background-image: url('{{ page.peopleThumb }}');"></div>
+    <div class="module image-module image-wrap -landscape -portrait-md">
+      <div class="image" style="background-image: url('{{ page.peopleThumb }}');"></div>
     </div>
   </div>
   <div class="row-block">

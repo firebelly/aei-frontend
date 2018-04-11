@@ -85,6 +85,13 @@
     right: 20px;
     height: 7px;
   }
+
+  .icon-down-arrow {
+    top: 15px;
+    width: 7px;
+    right: 15px;
+    height: 9px;
+  }
 }
 
 @each $color-key, $color in $colors {

@@ -30,72 +30,95 @@ people:
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person1.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person2.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person3.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person4.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person5.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person6.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person1.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person2.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person3.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person4.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person5.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person6.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person1.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person2.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person3.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person4.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person5.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person6.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person1.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person2.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person3.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person4.jpg
+    permalink: #
   - name: Firstname Lastname
     title: Title
     photoUrl: /uploads/person5.jpg
+    permalink: #
 ---
 
 <div class="row">
@@ -117,9 +140,9 @@ people:
     </div>
   {% endfor %}
 </div>
-<ul class="row people-row semantic-only-list">
+<ul class="row -quarters semantic-only-list">
   {% for module in page.people %}
-    <li class="row-block">
+    <li class="row-block quarter-separator">
       {% include modules/person.html %}
     </li>
   {% endfor %}

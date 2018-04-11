@@ -40,21 +40,21 @@ modules:
     permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
-    thumb: /uploads/placeholder-project-thumb1.jpg 
+    image: /uploads/placeholder-project-thumb1.jpg 
     aspectRatio: landscape 
     color: blue
   - type: project
     permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
-    thumb: /uploads/placeholder-project-thumb2.jpg
+    image: /uploads/placeholder-project-thumb2.jpg
     aspectRatio: landscape 
     color: black
   - type: project
     permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
-    thumb: /uploads/placeholder-project-thumb3.jpg
+    image: /uploads/placeholder-project-thumb3.jpg
     aspectRatio: landscape 
     color: black
   - type: stat
@@ -65,14 +65,14 @@ modules:
     permalink: /projects/north-carolina-state-university
     title: Stanford University
     subtitle: Stanford Energy Systems Innovations
-    thumb: /uploads/placeholder-project-thumb4.jpg
+    image: /uploads/placeholder-project-thumb4.jpg
     aspectRatio: portrait 
     color: green
   - type: project
     permalink: /projects/north-carolina-state-university
     title: University of Washington
     subtitle:  Molecular Engineering & Sciences Building
-    thumb: /uploads/placeholder-project-thumb5.jpg
+    image: /uploads/placeholder-project-thumb5.jpg
     aspectRatio: landscape 
     color: brass
   - type: stat
@@ -83,20 +83,20 @@ modules:
     permalink: /projects/north-carolina-state-university
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
-    thumb: /uploads/placeholder-project-thumb1.jpg
+    image: /uploads/placeholder-project-thumb1.jpg
     aspectRatio: landscape
     color: black
   - type: project
     permalink: /projects/north-carolina-state-university
     title: Ann & Robert H. Lurie Children’s Hospital Of Chicago
     subtitle: Stanford Energy Systems Innovations
-    thumb: /uploads/placeholder-project-thumb6.jpg
+    image: /uploads/placeholder-project-thumb6.jpg
     aspectRatio: portrait
     color: violet
 ---
 <div class="row">
   <div class="row-block">
-    <div class="module text-module background-white text-black">
+    <div class="module text-module background-white text-black pull-h1-to-top">
       <p class="font-h1">Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       <div class="buttons">
         <button class="contacts-open button">

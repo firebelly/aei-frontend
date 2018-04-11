@@ -79,7 +79,7 @@ modules:
 ---
 <div class="hero-wrap">
   <div class="hero-image">
-    <div class="thumb" style="background-image: url({{ page.heroImageUrl }});"></div>
+    <div class="image" style="background-image: url({{ page.heroImageUrl }});"></div>
   </div>
   <div class="row">
     {% for module in page.featuredModule %}
@@ -89,9 +89,9 @@ modules:
     {% endfor %}
   </div>
 </div>
-<ul class="row -separators semantic-only-list">
+<ul class="row semantic-only-list">
   {% for module in page.modules %}
-    <li class="row-block background-white text-black">
+    <li class="row-block background-white text-black post-separator">
       {% include modules/{{ module.type }}.html %}
     </li>
   {% endfor %}

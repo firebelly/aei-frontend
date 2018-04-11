@@ -1,0 +1,83 @@
+
+.row-block {
+  &.post-separator {
+    position: relative;
+
+    &::after {
+      bottom: 0;
+      height: 1px;
+      content: '';
+      left: $padding;
+      right: $padding;
+      position: absolute;
+      background: $off-white;
+    }
+
+    @include media-md {
+      &:nth-child(odd){
+        &::after {
+          right: 0;
+          left: auto;
+          width: 1px;
+          height: auto;
+          top: $padding;
+          bottom: $padding;
+        }
+      }
+
+      &:nth-child(even){
+        &::after {
+          left: calc(-100% + #{$padding})
+        }
+      }
+
+      &:last-child {
+        ::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.quarter-separator {
+
+    .module { // All the flexbox here is for when the .separator-container's within a row have different heights, we still want a uniform separator height
+      display: flex;
+      flex-direction: column;
+    }
+
+    .separator-container {
+      flex-grow: 1; 
+      position: relative;
+
+      &::after {
+        right: 0;
+        width: 1px;
+        content: '';
+        top: $padding;
+        bottom: $padding;
+        position: absolute;
+        background: $off-white;
+      }
+    }
+
+    // no seperators on mobile
+    @include max-screen(($breakpoint-quarters-2col - 1px)) {
+      .separator-container::after { display: none; }
+    }
+
+    // hide even separator and last seperator
+    @include screen($breakpoint-quarters-2col, ($breakpoint-quarters-4col - 1px)) {
+      &:nth-child(even), &:last-child {
+        .separator-container::after { display: none; }
+      }
+    }
+
+    // Hide 4th seperators and last separator
+    @include min-screen($breakpoint-quarters-4col) {
+      &:nth-child(4n), &:last-child {
+        .separator-container::after { display: none; }
+      }
+    }
+  }
+}

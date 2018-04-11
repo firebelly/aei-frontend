@@ -1,18 +1,15 @@
 // Header
 
 .site-header {
+  background-color: $concrete-med;
+
   .secondary-links, .search-block {
     display: none;
-  }
-
-  .row-block {
-    padding: $padding;
   }
 
   .lockup-block {
     background: $white;
   }
-
 
   @include media-lg {
     min-height: 16*$beat;

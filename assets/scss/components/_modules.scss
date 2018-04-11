@@ -35,10 +35,10 @@ button {
   }
 }
 
-.image-module {
+.image-wrap {
   position: relative;
 
-  .thumb {
+  .image {
     top: 0;
     left: 0;
     right: 0;
@@ -48,7 +48,7 @@ button {
     background-color: $gray;
   }
 
-  &.-portrait, &.-landscape {
+  &.-portrait, &.-landscape, &.-square {
     height: 0; 
   }
 
@@ -59,6 +59,10 @@ button {
 
   &.-portrait {
     padding-bottom: $portrait-padding;
+  }
+
+  &.-square {
+    padding-bottom: 100%;
   }
 
   @include media-md {
@@ -101,30 +105,6 @@ button {
     &::after, &::before {
       transform: skew(-18deg) translateX(0);
     }
-  }
-
-  .thumb-wrap {
-    height: 0;
-    position: relative;
-
-    .thumb {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      position: absolute;
-      background-size: cover;
-      background-color: $gray;
-      background-position: center center;
-    }
-  }
-
-  &.-landscape .thumb-wrap {
-    padding-bottom: $landscape-padding;
-  }
-
-  &.-portrait .thumb-wrap {
-    padding-bottom: $portrait-padding;
   }
 
   .title {
@@ -225,17 +205,11 @@ button {
 }
 
 .post-module {
-  padding: $padding;
-  a {
-    text-decoration: none;
-  }
   .category {
-    @include font-details;
     color: $red;
   }
   .title {
     margin: 5px 0;
-    @include font-nav;
   }
   .excerpt {
     margin: 4.5*$beat 0 5.5*$beat;
@@ -243,70 +217,11 @@ button {
 }
 
 .person-module {
-  position: relative;
-
-  .photo {
-    height: 0;
-    position: relative;
-    padding-bottom: 100%;
-  }
-
-  .text {
-    padding: $padding;
-    position: relative;
-
-    &::after {
-      right: 0;
-      width: 1px;
-      content: '';
-      top: $padding;
-      bottom: $padding;
-      position: absolute;
-      background: $off-white;
-    }
-
-    .name {
-      @include font-p;
-      margin: 0;
-    }
-
-    .title {
-      @include font-details;
-      margin: 6px 0 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
+  .title {
+    margin: 6px 0 0;
   }
 }
 
-$breakpoint-people-2: 550px;
-$breakpoint-people-4: 900px;
-.people-row {
-
-  @include max-screen(($breakpoint-people-2 - 1px)) {
-    .person-module .text::after { display: none; }
-  }
-  @include screen($breakpoint-people-2, ($breakpoint-people-4 - 1px)) {
-    .row-block {
-      flex-basis: 50%;
-
-      &:nth-child(even), &:last-child {
-        .person-module .text::after { display: none; }
-      }
-    }
-  }
-  @include min-screen($breakpoint-people-4) {
-    .row-block {
-      flex-basis: 25%;
-
-      &:nth-child(4n), &:last-child {
-        .person-module .text::after { display: none; }
-      }
-    }
-  }
-}
 
 .stat-two-number-module {
   display: flex;
