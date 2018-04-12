@@ -5,15 +5,17 @@ button {
   outline: 0;
 }
 
-.text-module {
+.text-module, .html-module {
   padding: $padding;
   
-  :first-child {
-    margin-top: 0;
-  }
+  &, .user-content {
+    :first-child {
+      margin-top: 0;
+    }
 
-  :last-child {
-    margin-bottom: 0;
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   .buttons {
@@ -32,6 +34,12 @@ button {
         margin-right: 0;
       }
     }
+  }
+}
+
+.quote-module {
+  footer {
+    margin-top: $padding;
   }
 }
 
@@ -78,7 +86,6 @@ button {
 }
 
 .project-module {
-  color: $white;
   overflow: hidden;
   position: relative;
 
@@ -90,7 +97,7 @@ button {
     height: 200%;
     background: $red;
     position: absolute;
-    transition: transform 0.5s;
+    transition: transform 0.5s $ease;
     transform: skew(-18deg) translateX(-100%);
     z-index: 1;
     
@@ -106,27 +113,37 @@ button {
       transform: skew(-18deg) translateX(0);
     }
   }
+}
+.project-title {
+  color: $white;
+  padding: $padding;
 
-  .title {
-    padding: $padding;
+  h1, h2 {
+    @include font-smoothing;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+  }
 
-    h1, h2 {
-      @include font-smoothing;
-      margin: 0;
-      z-index: 2;
-      position: relative;
-    }
+  h1 {
+    @include font-p;
+  }
 
-    h1 {
-      @include font-p;
-    }
+  h2 {
+    @include font-captions;
+  }
 
-    h2 {
-      @include font-captions;
-    }
-
-    a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+}
+// Ensure that, in a row rather than masonty, project-titles will stretch to match height of neighbor title if necessary
+.row-block {
+  .project-module {
+    display: flex;
+    flex-direction: column;
+    .project-title {
+      flex-grow: 1;
     }
   }
 }
@@ -241,14 +258,17 @@ button {
     background-color: $concrete-light;
   }
 
+  @include media-md {
+    min-height: 320px;
+  }
+
   .number {
     @include font-stat-small;
     margin: 0;
     max-width: 33.33%;
     flex-basis: 33.33%;
 
-    @include min-screen(450px) {
-
+    @include media-md {
       @include font-stat-medium;
     }
   }
@@ -261,5 +281,34 @@ button {
   .number-2 {
     align-self: flex-end;
     text-align: right;
+  }
+}
+
+.image-module {
+  @include clearfix;
+
+  .caption {
+    background: $white;
+    position: relative;
+    padding: 55px $padding $padding;
+
+    .icon {
+      top: 36px;
+      width: 6px;
+      height: 9px;
+      fill: $black;
+      left: $padding;
+      position: absolute;
+    }
+  }
+
+  &.-full .caption {
+    display: inline-block;
+    width: 50%;
+    margin-top: -6*$beat;
+
+    &.-right {
+      float: right;
+    }
   }
 }

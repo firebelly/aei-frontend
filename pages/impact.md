@@ -1,6 +1,7 @@
 ---
 title: Impact
 layout: base
+permalink: /impact/
 bodyClasses: 'page-impact overlapping-header'
 filters:
   - title: All
@@ -77,6 +78,8 @@ modules:
     permalink: #
 
 ---
+
+<!-- header (w/ featured post) -->
 <div class="hero-wrap">
   <div class="hero-image">
     <div class="image" style="background-image: url({{ page.heroImageUrl }});"></div>
@@ -89,6 +92,8 @@ modules:
     {% endfor %}
   </div>
 </div>
+
+<!-- posts -->
 <ul class="row semantic-only-list">
   {% for module in page.modules %}
     <li class="row-block background-white text-black post-separator">

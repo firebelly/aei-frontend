@@ -22,7 +22,7 @@
   right: $padding;
   padding: $padding;
   overflow-y: scroll;
-  transition: transform 0.2s;
+  transition: transform 0.2s $ease;
   background: $concrete-light;
 
   @include min-screen(900px) {
@@ -65,7 +65,7 @@
   }
 
   .primary-links {
-    @include font-nav;
+    @include font-h2;
     @include font-smoothing;
 
     margin-top: 15 * $beat;
@@ -204,7 +204,7 @@
   height: 100%;
   position: fixed;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s $ease;
   background-color: rgba($black,0.75);
 
   @include media-lg {

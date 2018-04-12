@@ -1,6 +1,7 @@
 ---
 title: People
 layout: base
+permalink: /people/
 
 bodyClasses: people-page white-header
 
@@ -19,8 +20,8 @@ filters:
   - title: Human Resources
     path: /people/human-resources/
 
-statModule:
-  - type: stat
+topModule:
+  - type: stat-two-number
     number1: 230
     unit1: People
     number2: 16
@@ -121,6 +122,7 @@ people:
     permalink: #
 ---
 
+<!-- header w/ stat -->
 <div class="row">
   <div class="row-block">
     <div class="module text-module background-white text-black">
@@ -134,15 +136,17 @@ people:
       </div>
     </div>
   </div>
-  {% for module in page.statModule %}
+  {% for module in page.topModule %}
     <div class="row-block">
-      {% include modules/stat-two-number.html %}
+      {% include modules/{{ module.type }}.html %}
     </div>
   {% endfor %}
 </div>
-<ul class="row -quarters semantic-only-list">
+
+<!-- people quarter-row -->
+<ul class="row quarter-row semantic-only-list vertical-big-margin">
   {% for module in page.people %}
-    <li class="row-block quarter-separator">
+    <li class="row-block quarter-row-separator">
       {% include modules/person.html %}
     </li>
   {% endfor %}

@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: base
+permalink: /
 bodyClasses: 'page-home'
 
 heroImageUrl: /uploads/home-hero.jpg
@@ -34,6 +35,8 @@ vimeoId: 194104576
 
 
 ---
+
+<!-- checkerboard header w/ theater -->
 <div class="checkerboard-header theater-wrap">
   <div class="row theater-cover-top">
     <div class="row-block">
@@ -63,6 +66,8 @@ vimeoId: 194104576
     </div>
   </div>
 </div>
+
+<!-- featured project -->
 <div class="row -flip-order-md">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">
@@ -82,6 +87,8 @@ vimeoId: 194104576
     </div>
   </div>
 </div>
+
+<!-- approach callout -->
 <div class="row">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">
@@ -101,13 +108,17 @@ vimeoId: 194104576
     </div>
   </div>
 </div>
-<ul class="row semantic-only-list">
+
+<!-- featured posts -->
+<ul class="row semaexntic-only-list">
   {% for module in page.posts %}
     <li class="row-block background-white text-black post-separator">
       {% include modules/post.html %}
     </li>
   {% endfor %}
 </ul>
+
+<!-- people callout -->
 <div class="row -flip-order-md">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">

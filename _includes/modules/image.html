@@ -1,0 +1,11 @@
+<div class="module image-module">
+  <div class="image-wrap -{{ module.aspectRatio }}">
+    <div class="image" style="background-image: url('{{ module.image }}');"></div>
+  </div>
+  {% if module.caption %}
+    <div class="caption font-captions">
+      <svg class="icon icon-up-arrow"><use xlink:href="#icon-up-arrow" /></svg>
+      <p div class="no-margin">{{ module.caption }}</p>
+    </div>
+  {% endif %}
+</div>

@@ -1,6 +1,7 @@
 ---
 title: Approach
 layout: base
+permalink: /approach/
 
 headline: Approach-focused what we do statement. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.
 
@@ -95,6 +96,8 @@ locations:
     permalink: #
 
 ---
+
+<!-- checkerboard header (no theater) -->
 <div class="checkerboard-header">
   <div class="row">
     <div class="row-block">
@@ -126,6 +129,8 @@ locations:
     </div>
   </div>
 </div>
+
+<!-- service section header -->
 <div class="row vertical-pad background-white text-black">
   <div class="row-block">
     <div class="module text-module">
@@ -138,14 +143,18 @@ locations:
     </div>
   </div>
 </div>
-<ul class="row -quarters semantic-only-list background-white big-margin-bottom">
+
+<!-- services quarter-row -->
+<ul class="row quarter-row semantic-only-list background-white big-margin-bottom">
   {% for module in page.services %}
-    <li class="row-block quarter-separator">
+    <li class="row-block quarter-row-separator">
       {% include modules/service.html %}
     </li>
   {% endfor %}
 </ul>
-<div class="row vertical-pad background-white text-black hr-top">
+
+<!-- location section header -->
+<div class="row vertical-pad background-white text-black hr-top-black">
   <div class="row-block">
     <div class="module text-module">
       <h2 id="locations" class="font-h1">Locations</h2>
@@ -157,9 +166,11 @@ locations:
     </div>
   </div>
 </div>
-<ul class="row -quarters semantic-only-list background-white big-margin-bottom">
+
+<!-- locations quarter-row -->
+<ul class="row quarter-row semantic-only-list background-white big-margin-bottom">
   {% for module in page.services %}
-    <li class="row-block quarter-separator">
+    <li class="row-block quarter-row-separator">
       {% include modules/service.html %}
     </li>
   {% endfor %}

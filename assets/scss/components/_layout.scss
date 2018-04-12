@@ -20,6 +20,7 @@
 }
 
 .row {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 
@@ -37,20 +38,26 @@
       }
     }
 
+    &.-full {
+      @include media-md {
+        flex-basis: 100%;
+      }
+    }
+
     .module {
       min-height: 100%;
     }
   }
 
-  &.-quarters {
+  &.quarter-row {
     .row-block {
       flex-basis: 100%;
 
-      @include min-screen($breakpoint-quarters-2col) {
+      @include min-screen($breakpoint-quarter-row-2col) {
         flex-basis: 50%;
       }
 
-      @include min-screen($breakpoint-quarters-4col) {
+      @include min-screen($breakpoint-quarter-row-4col) {
         flex-basis: 25%;
       }
     }
@@ -139,22 +146,22 @@
 .theater-wrap {
   .theater-cover-top, .theater-cover-bottom {
     z-index: 1;
-    transition: transform 0.3s 0.3s;
+    transition: transform 0.3s 0.3s $ease;
   }
 
   .theater-mask {
-    transition: opacity 0.3s;
+    transition: opacity 0.3s $ease;
   }
 
   &.-open {
     .theater-mask {
       opacity: 0;
-      transition: opacity 0.3s 0.3s;
+      transition: opacity 0.3s 0.3s $ease;
       pointer-events: none;
     }
     @include media-md {
       .theater-cover-top, .theater-cover-bottom {
-        transition: transform 0.3s;
+        transition: transform 0.3s $ease;
       }
       .theater-cover-top {
         transform: translateY(-100%);
@@ -165,6 +172,8 @@
     }
   }
 }
+
+
 
 
 

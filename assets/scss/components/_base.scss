@@ -89,17 +89,13 @@ a {
   margin-bottom: 3*$padding;
 }
 
-.hr-top {
-  position: relative;
-  &::before {
-    top: 0;
-    content: '';
-    height: 1px;
-    left: $padding;
-    right: $padding;
-    position: absolute;
-    background: $black;
-  }
+.big-margin-top {
+  margin-top: 3*$padding;
+}
+
+.vertical-big-margin {
+  margin-bottom: 3*$padding;
+  margin-top: 3*$padding;
 }
 
 .pull-h1-to-top {

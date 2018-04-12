@@ -1,1 +1,16 @@
 // Animations
+
+.zoom-hover {
+  .image-wrap {
+    overflow: hidden;
+  }
+  .image {
+    transition: transform 3s $ease;
+  }
+
+  &:hover {
+    .image {
+      transform: scale(1.05);
+    }
+  }
+}

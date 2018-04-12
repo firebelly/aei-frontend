@@ -1,0 +1,11 @@
+<div class="module image-module -full">
+  <div class="image-wrap -landscape">
+    <div class="image" style="background-image: url('{{ module.image }}');"></div>
+  </div>
+  {% if module.caption %}
+    <div class="caption -{{ module.captionSide }} font-captions">
+      <svg class="icon icon-up-arrow"><use xlink:href="#icon-up-arrow" /></svg>
+      <p div class="no-margin">{{ module.caption }}</p>
+    </div>
+  {% endif %}
+</div>

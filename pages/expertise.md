@@ -1,6 +1,7 @@
 ---
 title: Expertise
 layout: base
+permalink: /expertise/
 bodyClasses: 'page-expertise'
 
 filters:
@@ -37,21 +38,21 @@ filters:
 
 modules:
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
     image: /uploads/placeholder-project-thumb1.jpg 
     aspectRatio: landscape 
     color: blue
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: North Carolina State University
     subtitle: James B. Hunt Jr. Library
     image: /uploads/placeholder-project-thumb2.jpg
     aspectRatio: landscape 
     color: black
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
     image: /uploads/placeholder-project-thumb3.jpg
@@ -62,14 +63,14 @@ modules:
     unit: 
     text: Total Sq Ft Of LEED Certified Buildings
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: Stanford University
     subtitle: Stanford Energy Systems Innovations
     image: /uploads/placeholder-project-thumb4.jpg
     aspectRatio: portrait 
     color: green
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: University of Washington
     subtitle:  Molecular Engineering & Sciences Building
     image: /uploads/placeholder-project-thumb5.jpg
@@ -80,20 +81,22 @@ modules:
     unit: '%'
     text: Total Sq Ft Of LEED Certified Buildings
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: North Carolina State University
     subtitle: Stanford Energy Systems Innovations
     image: /uploads/placeholder-project-thumb1.jpg
     aspectRatio: landscape
     color: black
   - type: project
-    permalink: /projects/north-carolina-state-university
+    permalink: /projects/stanford-university/
     title: Ann & Robert H. Lurie Children’s Hospital Of Chicago
     subtitle: Stanford Energy Systems Innovations
     image: /uploads/placeholder-project-thumb6.jpg
     aspectRatio: portrait
     color: violet
 ---
+
+<!-- top row: project text and first project (wrapped so they can visually align) -->
 <div class="row">
   <div class="row-block">
     <div class="module text-module background-white text-black pull-h1-to-top">
@@ -119,6 +122,8 @@ modules:
     </div>
   {% endfor %}
 </div>
+
+<!-- all of the rest of the projects in masonry -->
 <div class="masonry-grid">
   <div class="masonry-sizer"></div>
   <ul class="semantic-only-list">

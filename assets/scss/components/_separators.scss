@@ -32,14 +32,14 @@
       }
 
       &:last-child {
-        ::after {
+        &::after {
           display: none;
         }
       }
     }
   }
 
-  &.quarter-separator {
+  &.quarter-row-separator {
 
     .module { // All the flexbox here is for when the .separator-container's within a row have different heights, we still want a uniform separator height
       display: flex;
@@ -62,22 +62,54 @@
     }
 
     // no seperators on mobile
-    @include max-screen(($breakpoint-quarters-2col - 1px)) {
+    @include max-screen(($breakpoint-quarter-row-2col - 1px)) {
       .separator-container::after { display: none; }
     }
 
     // hide even separator and last seperator
-    @include screen($breakpoint-quarters-2col, ($breakpoint-quarters-4col - 1px)) {
+    @include screen($breakpoint-quarter-row-2col, ($breakpoint-quarter-row-4col - 1px)) {
       &:nth-child(even), &:last-child {
         .separator-container::after { display: none; }
       }
     }
 
     // Hide 4th seperators and last separator
-    @include min-screen($breakpoint-quarters-4col) {
+    @include min-screen($breakpoint-quarter-row-4col) {
       &:nth-child(4n), &:last-child {
         .separator-container::after { display: none; }
       }
+    }
+  }
+}
+
+
+
+@each $color-key, $color in $colors {
+  .hr-top-#{$color-key} {
+    position: relative;
+    &::before {
+      top: 0;
+      z-index: 1;
+      content: '';
+      height: 1px;
+      left: $padding;
+      right: $padding;
+      position: absolute;
+      background: $color;
+    }
+  }
+
+  .hr-bottom-#{$color-key} {
+    position: relative;
+    &::after {
+      bottom: 0;
+      z-index: 1;
+      content: '';
+      height: 1px;
+      left: $padding;
+      right: $padding;
+      position: absolute;
+      background: $color;
     }
   }
 }
