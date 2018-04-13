@@ -1,12 +1,10 @@
 ---
-title: Stanford University
-permalink: /projects/stanford-university/
+title: Post Title Mattis Ultricies Cursus Inceptos
+permalink: /posts/example-post/
 layout: base
 bodyClasses: 'page-secondary overlapping-header'
 
-subtitle: Stanford Energy Systems Innovations
-heroImageUrl: /uploads/stanford-full.jpg
-color: green
+heroImageUrl: /uploads/impact-hero.jpg
 
 projectTeaser: First of its kind energy system. 70% more efficient and cutting carbon by well over half.
 projectDescription: <p>As prime consultant and lead engineer, Affiliated Engineers analyzed energy production options, evaluated capital and operating costs, and assessed financial and energy risk through 2050, then designed and directed implementation of central components projected to be greatly more efficient and significantly less harmful than Stanford’s previous system.</p>
@@ -63,50 +61,16 @@ filters:
 contentModules:
   - type: image-full
     image: /uploads/stanford1.jpg
-    caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
+    caption: The Power Systems Integration Lab supports optimization of large-scale distributed energy systems, with capacity for PV and wind system inverters, diesel and natural gas generators, battery packs, microgrid interconnection switchgear, and vehicles.
     captionSide: right
   - type: html
-    html: <p>The Stanford Energy Center, designed for a peak load of 28,000 tons of cooling and 350 mmbtu/hr heating, replaces a combined heat and power system with heat recovery chillers that - along with standard chillers and gas-fired hot water generators - capitalize on daily heating and cooling overlap to heat the campus, and hospital with recovered energy. Two million gallons of hot water and ten million gallons of chilled water Thermal Energy Storage accommodate high demand periods.</p>
+    html: <p>Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p><p>Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.</p>
   - type: stat-two-number
     number1: 228k
     unit1: Tons of cooling
     number2: 360
     unit2: mmbtu/hr heating  
-  - type: image
-    image: /uploads/stanford2.jpg
-    aspectRatio: landscape
-    caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
-  - type: image
-    image: /uploads/stanford3.jpg
-    aspectRatio: portrait
-    caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
-  - type: html
-    html: <p>Portions of the facility are regulated by OSHPD. A new 80 MVA, N+1, 60kV-12.47 substation will allow flexible future management of Stanford’s energy supply platform. Conversion of nearly 200 campus buildings from steam to hot water includes district energy heat exchanger stations at each building and over 20 miles of a direct buried, highly insulated, low loss hot water piping system conforming to European Standard EN253. SESI became operational in 2015.</p>
-  - type: quote
-    quote:  The Stanford Energy System Innovations project represents nothing less than a revolution in the way campuses in the U.S. should be heated and cooled.
-    source: Engineering News-Record
-  - type: image-full
-    image: /uploads/impact-hero.jpg
-    caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
-    captionSide: left
 
-relatedPeople:
-  - name: Firstname Lastname
-    title: Title
-    photoUrl: /uploads/person1.jpg
-    permalink: #
-  - name: Firstname Lastname
-    title: Title
-    photoUrl: /uploads/person2.jpg
-    permalink: #
-  - name: Firstname Lastname
-    title: Title
-    photoUrl: /uploads/person3.jpg
-    permalink: #
-  - name: Firstname Lastname
-    title: Title
-    photoUrl: /uploads/person4.jpg
-    permalink: #
 
 relatedPosts:  
   - title: Short Post Title
@@ -117,20 +81,6 @@ relatedPosts:
     category: Article
     excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
     permalink: #
-
-relatedProjects:
-  - title: North Carolina State University
-    subtitle: Stanford Energy Systems Innovations
-    image: /uploads/placeholder-project-thumb1.jpg
-    aspectRatio: landscape
-    color: black
-    permalink: /projects/standford-university
-  - title: Ann & Robert H. Lurie Children’s Hospital Of Chicago
-    subtitle: Stanford Energy Systems Innovations
-    image: /uploads/placeholder-project-thumb6.jpg
-    aspectRatio: landscape
-    color: violet
-    permalink: /projects/standford-university
 ---
 
 {% include secondary-header.html %}

@@ -98,11 +98,34 @@ a {
   margin-top: 3*$padding;
 }
 
+.margin-bottom {
+  margin-bottom: $padding;
+}
+
+.margin-top {
+  margin-top: $padding;
+}
+
+.vertical-margin {
+  margin-bottom: $padding;
+  margin-top: $padding;
+}
+
 .pull-h1-to-top {
   &, &.text-module, &.pad {
     @include media-lg {
       padding-top: 0;
       margin-top: -7px;
     }   
+  }
+}
+
+.top-overlap {
+  @include media-md {
+    margin-top: -96px;
+  }
+
+  @include media-lg {
+    margin-top: -113px;
   }
 }

@@ -123,7 +123,7 @@ people:
 ---
 
 <!-- header w/ stat -->
-<div class="row">
+<div class="row -halves">
   <div class="row-block">
     <div class="module text-module background-white text-black">
       <p class="font-h1">Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
@@ -143,10 +143,10 @@ people:
   {% endfor %}
 </div>
 
-<!-- people quarter-row -->
-<ul class="row quarter-row semantic-only-list vertical-big-margin">
+<!-- people -quarters -->
+<ul class="row -quarters photo-row-separators semantic-only-list vertical-big-margin">
   {% for module in page.people %}
-    <li class="row-block quarter-row-separator">
+    <li class="row-block">
       {% include modules/person.html %}
     </li>
   {% endfor %}

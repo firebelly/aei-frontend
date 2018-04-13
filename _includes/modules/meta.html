@@ -1,0 +1,8 @@
+<div class="meta-module module background-white text-black">
+  {% for meta in page.meta %}
+    <div class="meta -{{ meta.width }} {% if meta.width=='half' %}-{% cycle 'left', 'right' %}{% endif %}">
+      <h4 class="title font-p">{{ meta.title }}</h4>
+      <div class="content font-details">{{ meta.content }}</div>
+    </div>
+  {% endfor %}
+</div>

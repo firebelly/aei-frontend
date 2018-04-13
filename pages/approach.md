@@ -99,7 +99,7 @@ locations:
 
 <!-- checkerboard header (no theater) -->
 <div class="checkerboard-header">
-  <div class="row">
+  <div class="row -halves">
     <div class="row-block">
       <div class="module text-module background-white text-black pull-h1-to-top">
         <p class="font-h1 no-margin">{{ page.headline }}</p>
@@ -121,7 +121,7 @@ locations:
   <div class="checkerboard-hero">
     <div class="image bg-cover fill" style="background-image: url({{ page.heroImageUrl }});"></div>
   </div>
-  <div class="row">
+  <div class="row -halves">
     <div class="row-block -right">
       <div class="text-module background-black text-off-white font-smoothing">
         <p>{{ page.supportingStatement }}</p>
@@ -131,7 +131,7 @@ locations:
 </div>
 
 <!-- service section header -->
-<div class="row vertical-pad background-white text-black">
+<div class="row -halves vertical-pad background-white text-black">
   <div class="row-block">
     <div class="module text-module">
       <h2 id="services" class="font-h1">Services</h2>
@@ -144,17 +144,17 @@ locations:
   </div>
 </div>
 
-<!-- services quarter-row -->
-<ul class="row quarter-row semantic-only-list background-white big-margin-bottom">
+<!-- services -quarters -->
+<ul class="row -quarters photo-row-separators semantic-only-list background-white big-margin-bottom">
   {% for module in page.services %}
-    <li class="row-block quarter-row-separator">
+    <li class="row-block">
       {% include modules/service.html %}
     </li>
   {% endfor %}
 </ul>
 
 <!-- location section header -->
-<div class="row vertical-pad background-white text-black hr-top-black">
+<div class="row -halves vertical-pad background-white text-black hr-top-black">
   <div class="row-block">
     <div class="module text-module">
       <h2 id="locations" class="font-h1">Locations</h2>
@@ -167,10 +167,10 @@ locations:
   </div>
 </div>
 
-<!-- locations quarter-row -->
-<ul class="row quarter-row semantic-only-list background-white big-margin-bottom">
+<!-- locations -quarters -->
+<ul class="row -quarters photo-row-separators semantic-only-list background-white big-margin-bottom">
   {% for module in page.services %}
-    <li class="row-block quarter-row-separator">
+    <li class="row-block">
       {% include modules/service.html %}
     </li>
   {% endfor %}

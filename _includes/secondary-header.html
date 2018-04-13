@@ -1,0 +1,14 @@
+<!-- header -->
+<div class="hero-wrap">
+  <div class="hero-image">
+    <div class="image" style="background-image: url({{ page.heroImageUrl }});"></div>
+  </div>
+  <div class="row -halves">
+    <div class="row-block -right">
+      <div class="module text-module background-{% if page.color %}{{ page.color }}{% else %}black{% endif %} text-white font-smoothing"> 
+        <h1 class="font-h2 no-margin">{{ page.title }}</h1>
+        {% if page.subtitle %}<h2 class="font-captions no-margin">{{ page.subtitle }}</h2>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>

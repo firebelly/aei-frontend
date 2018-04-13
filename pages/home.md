@@ -22,11 +22,11 @@ posts:
   - title: Blog Post Title
     category: Post Topic Label
     excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
-    permalink: #
+    permalink: /posts/example-post/
   - title: Announcement Title
     category: Post Topic Label
     excerpt: Post introduction. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
-    permalink: #
+    permalink: /posts/example-post/
 
 peopleTeaser: Culture messaging — Careers focused. Aenean eu leo quam. Ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non.
 peopleThumb: /uploads/people.jpg
@@ -38,7 +38,7 @@ vimeoId: 194104576
 
 <!-- checkerboard header w/ theater -->
 <div class="checkerboard-header theater-wrap">
-  <div class="row theater-cover-top">
+  <div class="row -halves theater-cover-top">
     <div class="row-block">
       <div class="module text-module background-white text-black pull-h1-to-top">
         <p class="font-h1 no-margin">{{ page.headline }}</p>
@@ -58,7 +58,7 @@ vimeoId: 194104576
     </div>
     <div class="theater-mask image bg-cover fill" style="background-image: url({{ page.heroImageUrl }});"></div>
   </div>
-  <div class="row theater-cover-bottom">
+  <div class="row -halves theater-cover-bottom">
     <div class="row-block -right">
       <div class="text-module background-black text-off-white font-smoothing">
         <p>{{ page.supportingStatement }}</p>
@@ -68,7 +68,7 @@ vimeoId: 194104576
 </div>
 
 <!-- featured project -->
-<div class="row -flip-order-md">
+<div class="row -halves -flip-order-md">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">
       <div class="image" style="background-image: url('{{ page.projectThumb }}');"></div>
@@ -89,7 +89,7 @@ vimeoId: 194104576
 </div>
 
 <!-- approach callout -->
-<div class="row">
+<div class="row -halves">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">
       <div class="image" style="background-image: url('{{ page.approachThumb }}');"></div>
@@ -110,16 +110,16 @@ vimeoId: 194104576
 </div>
 
 <!-- featured posts -->
-<ul class="row semaexntic-only-list">
+<ul class="row -halves -separators semantic-only-list">
   {% for module in page.posts %}
-    <li class="row-block background-white text-black post-separator">
+    <li class="row-block background-white text-black separate">
       {% include modules/post.html %}
     </li>
   {% endfor %}
 </ul>
 
 <!-- people callout -->
-<div class="row -flip-order-md">
+<div class="row -halves -flip-order-md">
   <div class="row-block">
     <div class="module image-module image-wrap -landscape -portrait-md">
       <div class="image" style="background-image: url('{{ page.peopleThumb }}');"></div>

@@ -1,0 +1,57 @@
+<div class="secondary-page-footer">
+
+  <!-- project leaders -->
+  {% if page.relatedPeople %}
+    <div class="row -single margin-top">
+      <div class="row-block">
+        <div class="module text-module text-black">
+          <h2 class="font-h2">Project Leaders</h2>
+        </div>
+      </div>
+    </div>
+    <ul class="row -quarters photo-row-separators semantic-only-list">
+      {% for module in page.relatedPeople %}
+        <li class="row-block">
+          {% include modules/person.html %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- related impact posts -->
+  {% if page.relatedPosts %}
+    <div class="row -single margin-top">
+      <div class="row-block">
+        <div class="module text-module text-black">
+          <h2 class="font-h2">Related Impact</h2>
+        </div>
+      </div>
+    </div>
+    <ul class="row -halves -separators semantic-only-list hr-top-off-white hr-bottom-off-white">
+      {% for module in page.relatedPosts %}
+        <li class="row-block background-white text-black separate">
+          {% include modules/post.html %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+  <!-- related projects -->
+  {% if page.relatedProjects %}
+    <div class="row -single margin-top">
+      <div class="row-block">
+        <div class="module text-module text-black">
+          <h2 class="font-h2">Projects</h2>
+        </div>
+      </div>
+    </div>
+    <ul class="row -halves semantic-only-list">
+      {% for module in page.relatedProjects %}
+        <li class="row-block">
+          {% include modules/project.html %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

@@ -1,0 +1,10 @@
+<!-- modular content -->
+{% if page.contentModules %}
+  <div class="row -halves -spaced background-white text-black">
+    {% for module in page.contentModules %}
+      <div class="row-block {% if module.type == 'image-full' %}-double{% endif %}">
+        {% include modules/{{ module.type }}.html %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

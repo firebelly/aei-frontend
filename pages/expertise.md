@@ -97,7 +97,7 @@ modules:
 ---
 
 <!-- top row: project text and first project (wrapped so they can visually align) -->
-<div class="row">
+<div class="row -halves">
   <div class="row-block">
     <div class="module text-module background-white text-black pull-h1-to-top">
       <p class="font-h1">Filtered market specific description. Nullam quis risus eget urna mollis ornare vel eu leo.</p>

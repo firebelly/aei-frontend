@@ -293,9 +293,9 @@ button {
     padding: 55px $padding $padding;
 
     .icon {
-      top: 36px;
-      width: 6px;
-      height: 9px;
+      top: 38px;
+      width: 7px;
+      height: 10px;
       fill: $black;
       left: $padding;
       position: absolute;
@@ -303,12 +303,40 @@ button {
   }
 
   &.-full .caption {
-    display: inline-block;
-    width: 50%;
-    margin-top: -6*$beat;
+    @include media-md {
+      display: inline-block;
+      width: 50%;
+      margin-top: -6*$beat;
 
-    &.-right {
-      float: right;
+      &.-right {
+        float: right;
+      }
+    }
+  }
+}
+
+.meta-module {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+
+  .meta {
+    flex: 0 0 0;
+    padding: 30px $padding $padding;
+
+    .title {
+      margin: 0 0 7px;
+    }
+
+    &.-half {
+      max-width: 50%;
+      flex-basis: 50%; 
+      padding-right: 30px;
+    }
+
+    &.-full {
+      flex-basis: 100%;
     }
   }
 }
