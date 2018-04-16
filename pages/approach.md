@@ -51,49 +51,49 @@ locationsDescription: Supporting statement with description of digital practices
 locations:
   - name: Baltimore
     photoUrl: /uploads/location1.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Chapel Hill
     photoUrl: /uploads/location2.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Chicago
     photoUrl: /uploads/location3.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Denver
     photoUrl: /uploads/location4.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Gainesville
     photoUrl: /uploads/location5.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Houston
     photoUrl: /uploads/location6.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Los Angelos
     photoUrl: /uploads/location7.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Madison
     photoUrl: /uploads/location8.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Pheonix
     photoUrl: /uploads/location9.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Portland
     photoUrl: /uploads/location10.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: San Francisco
     photoUrl: /uploads/location11.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Seattle
     photoUrl: /uploads/location12.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Tampa
     photoUrl: /uploads/location13.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Washington DC
     photoUrl: /uploads/location14.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
   - name: Leicester
     photoUrl: /uploads/location15.jpg
-    permalink: #
+    permalink: /locations/san-francisco/
 
 ---
 
@@ -169,9 +169,9 @@ locations:
 
 <!-- locations -quarters -->
 <ul class="row -quarters photo-row-separators semantic-only-list background-white big-margin-bottom">
-  {% for module in page.services %}
+  {% for module in page.locations %}
     <li class="row-block">
-      {% include modules/service.html %}
+      {% include modules/location.html %}
     </li>
   {% endfor %}
 </ul>

@@ -63,7 +63,7 @@ contentModules:
     image: /uploads/stanford1.jpg
     caption: The Power Systems Integration Lab supports optimization of large-scale distributed energy systems, with capacity for PV and wind system inverters, diesel and natural gas generators, battery packs, microgrid interconnection switchgear, and vehicles.
     captionSide: right
-  - type: html
+  - type: text
     html: <p>Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.</p><p>Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.</p>
   - type: stat-two-number
     number1: 228k

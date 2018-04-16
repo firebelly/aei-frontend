@@ -1,12 +1,25 @@
 ---
-title: Instrumentation & Controls
-permalink: /services/instrumentation-and-controls/
+title: San Francisco
+permalink: /locations/san-francisco/
 layout: base
 bodyClasses: 'page-secondary overlapping-header'
 
-heroImageUrl: /uploads/instrumentation-and-controls.jpg
+heroImageUrl: /uploads/san-francisco.jpg
 
+quote: Quote about how great the city is. Donec id elit non mi porta gravida at eget. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+quoteSource: Employee Name
 intro: <p>Short paragraph describing service with a focus on AEI’s value prop for specific service. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+meta:
+  - title: Address
+    content: <a href="#">123 Mission St. 7th Floor<br>San Francisco, CA 94105</a>
+    width: full
+  - title: Phone
+    content: 415.764.3700
+    width: half
+  - title: Email
+    content: <a href="#">sanfrancisco@aeieng.com</a>
+    width: half
 
 relatedPosts:  
   - title: Short Post Title
@@ -62,9 +75,10 @@ relatedProjects:
     aspectRatio: landscape
     color: black
 
-prevPost: Process Engineering
+
+prevPost: Portland
 prevPostPermalink: #
-nextPost: Cost Estimating
+nextPost: Seattle
 nextPostPermalink: #
 ---
 
@@ -78,4 +92,4 @@ nextPostPermalink: #
 {% assign relatedPostsTitle = page.title | append: ' Impact' %}
 {% include related-posts.html title=relatedPostsTitle %}
 
-{% include post-navigation.html category="Service" %}
+{% include post-navigation.html category="Location" %}

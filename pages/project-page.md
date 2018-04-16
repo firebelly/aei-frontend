@@ -65,7 +65,7 @@ contentModules:
     image: /uploads/stanford1.jpg
     caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
     captionSide: right
-  - type: html
+  - type: text
     html: <p>The Stanford Energy Center, designed for a peak load of 28,000 tons of cooling and 350 mmbtu/hr heating, replaces a combined heat and power system with heat recovery chillers that - along with standard chillers and gas-fired hot water generators - capitalize on daily heating and cooling overlap to heat the campus, and hospital with recovered energy. Two million gallons of hot water and ten million gallons of chilled water Thermal Energy Storage accommodate high demand periods.</p>
   - type: stat-two-number
     number1: 228k
@@ -80,7 +80,7 @@ contentModules:
     image: /uploads/stanford3.jpg
     aspectRatio: portrait
     caption: Image caption. Integer posuere erat a ante dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Duis mollis.
-  - type: html
+  - type: text
     html: <p>Portions of the facility are regulated by OSHPD. A new 80 MVA, N+1, 60kV-12.47 substation will allow flexible future management of Stanford’s energy supply platform. Conversion of nearly 200 campus buildings from steam to hot water includes district energy heat exchanger stations at each building and over 20 miles of a direct buried, highly insulated, low loss hot water piping system conforming to European Standard EN253. SESI became operational in 2015.</p>
   - type: quote
     quote:  The Stanford Energy System Innovations project represents nothing less than a revolution in the way campuses in the U.S. should be heated and cooled.

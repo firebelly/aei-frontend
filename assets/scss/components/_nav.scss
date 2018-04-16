@@ -1,18 +1,5 @@
 // Main Site Navigation
 
-@keyframes nav-arrow-hover {
-  0% {
-    opacity: 0;
-    transform: translateX(-150px);
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: none;
-  }
-}
-
 .site-nav {
   top: 0;
   left: 0;
@@ -22,8 +9,8 @@
   right: $padding;
   padding: $padding;
   overflow-y: scroll;
-  transition: transform 0.2s $ease;
   background: $concrete-light;
+  transition: transform 0.2s $ease;
 
   @include min-screen(900px) {
     right: auto;
@@ -112,8 +99,9 @@
 
       a:hover {
         &::after {
-          animation-name: nav-arrow-hover;
           animation-duration: 0.3s;
+          animation-timing-function: $ease;
+          animation-name: right-arrow-hover;
         }
       }
     }
