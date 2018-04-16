@@ -8,8 +8,8 @@ subtitle: Stanford Energy Systems Innovations
 heroImageUrl: /uploads/stanford-full.jpg
 color: green
 
-projectTeaser: First of its kind energy system. 70% more efficient and cutting carbon by well over half.
-projectDescription: <p>As prime consultant and lead engineer, Affiliated Engineers analyzed energy production options, evaluated capital and operating costs, and assessed financial and energy risk through 2050, then designed and directed implementation of central components projected to be greatly more efficient and significantly less harmful than Stanford’s previous system.</p>
+headline: First of its kind energy system. 70% more efficient and cutting carbon by well over half.
+intro: <p>As prime consultant and lead engineer, Affiliated Engineers analyzed energy production options, evaluated capital and operating costs, and assessed financial and energy risk through 2050, then designed and directed implementation of central components projected to be greatly more efficient and significantly less harmful than Stanford’s previous system.</p>
 
 meta:
   - title: Services
@@ -139,4 +139,8 @@ relatedProjects:
 
 {% include secondary-modules.html %}
 
-{% include secondary-footer.html %}
+{% include related-people.html title="Project Leaders" %}
+
+{% include related-posts.html title="Related Impact" %}
+
+{% include related-projects.html title="Related Projects" %}

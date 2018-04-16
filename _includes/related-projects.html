@@ -1,0 +1,16 @@
+{% if page.relatedProjects %}
+  <div class="row -single margin-top">
+    <div class="row-block">
+      <div class="module text-module text-black">
+        <h2 class="font-h2">{% if include.title %}{{ include.title }}{% else %}Related Projects{% endif %}</h2>
+      </div>
+    </div>
+  </div>
+  <ul class="row -halves semantic-only-list">
+    {% for module in page.relatedProjects %}
+      <li class="row-block">
+        {% include modules/project.html %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

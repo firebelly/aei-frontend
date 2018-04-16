@@ -80,39 +80,47 @@ a {
   padding: $padding;
 }
 
-.vertical-pad {
+.pad-vertical {
   padding-top: $padding;
   padding-bottom: $padding;
 }
 
-.big-margin-bottom {
-  margin-bottom: 3*$padding;
+
+
+.big-margin {
+  &-bottom, &-vertical {
+    margin-bottom: $padding;
+    @include media-md {
+      margin-bottom: 3*$padding;
+    }
+  }
+
+  &-top, &-vertical {
+    margin-top: $padding;
+    @include media-md {
+      margin-top: 3*$padding;
+    }
+  }
 }
 
-.big-margin-top {
-  margin-top: 3*$padding;
-}
+.margin {
+  &-bottom, &-vertical {
+    margin-bottom: $padding;
+    @include media-md {
+      margin-bottom: 2*$padding;
+    }
+  }
 
-.vertical-big-margin {
-  margin-bottom: 3*$padding;
-  margin-top: 3*$padding;
-}
-
-.margin-bottom {
-  margin-bottom: $padding;
-}
-
-.margin-top {
-  margin-top: $padding;
-}
-
-.vertical-margin {
-  margin-bottom: $padding;
-  margin-top: $padding;
+  &-top, &-vertical {
+    margin-top: $padding;
+    @include media-md {
+      margin-top: 2*$padding;
+    }
+  }
 }
 
 .pull-h1-to-top {
-  &, &.text-module, &.pad {
+  &, &.text-module, &.pad, &.pad-vertical { // specificity
     @include media-lg {
       padding-top: 0;
       margin-top: -7px;
@@ -121,11 +129,19 @@ a {
 }
 
 .top-overlap {
-  @include media-md {
-    margin-top: -96px;
+  &-h1 {
+    @include media-md {
+      margin-top: -96px;
+    }
+
+    @include media-lg {
+      margin-top: -113px;
+    }
   }
 
-  @include media-lg {
-    margin-top: -113px;
+  &-p {
+    @include media-md {
+      margin-top: -106px;
+    }
   }
 }

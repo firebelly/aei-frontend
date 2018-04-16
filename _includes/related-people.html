@@ -1,0 +1,16 @@
+{% if page.relatedPeople %}
+  <div class="row -single margin-top">
+    <div class="row-block">
+      <div class="module text-module text-black">
+        <h2 class="font-h2">{% if include.title %}{{ include.title }}{% else %}Related People{% endif %}</h2>
+      </div>
+    </div>
+  </div>
+  <ul class="row -quarters photo-row-separators semantic-only-list margin-bottom">
+    {% for module in page.relatedPeople %}
+      <li class="row-block">
+        {% include modules/person.html %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

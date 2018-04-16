@@ -13,7 +13,9 @@
 
   &.-spaced {
     .row-block {
-      margin-top: $padding;
+      @include media-md {
+        margin-top: $padding;
+      }
     }
   }
 

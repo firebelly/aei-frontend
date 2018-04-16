@@ -1,12 +1,14 @@
 <!-- intro -->
 <div class="row -halves">
-  <div class="row-block top-overlap">
+  <div class="row-block{% if page.headline %} top-overlap-h1{% else %} top-overlap-p{% endif %}">
     <div class="module text-module background-white text-black">
-      <p class="font-h1">{{ page.projectTeaser }}</p>
-      <div class="user-content">{{ page.projectDescription }}</div>
+      {% if page.headline %}<p class="font-h1 headline">{{ page.headline }}</p>{% endif %}
+      <div class="user-content">{{ page.intro }}</div>
     </div>
   </div>
-  <div class="row-block">
-    {% include modules/meta.html %}
-  </div>
+  {% if page.meta %}
+    <div class="row-block">
+      {% include modules/meta.html %}
+    </div>
+  {% endif %}
 </div>

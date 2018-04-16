@@ -1,0 +1,16 @@
+{% if page.relatedPosts %}
+  <div class="row -single margin-top">
+    <div class="row-block">
+      <div class="module text-module text-black">
+        <h2 class="font-h2">{% if include.title %}{{ include.title }}{% else %}Related Impact{% endif %}</h2>
+      </div>
+    </div>
+  </div>
+  <ul class="row -halves -separators semantic-only-list hr-top-off-white hr-bottom-off-white margin-bottom">
+    {% for module in page.relatedPosts %}
+      <li class="row-block background-white text-black separate">
+        {% include modules/post.html %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

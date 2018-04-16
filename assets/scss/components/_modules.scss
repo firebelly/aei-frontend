@@ -286,6 +286,9 @@ button {
 
 .image-module {
   @include clearfix;
+  @include max-screen($breakpoint-md - 1px) {
+    margin-top: $padding;
+  }
 
   .caption {
     background: $white;

@@ -144,7 +144,7 @@ people:
 </div>
 
 <!-- people -quarters -->
-<ul class="row -quarters photo-row-separators semantic-only-list vertical-big-margin">
+<ul class="row -quarters photo-row-separators semantic-only-list big-margin-vertical">
   {% for module in page.people %}
     <li class="row-block">
       {% include modules/person.html %}

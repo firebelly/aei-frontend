@@ -14,37 +14,37 @@ servicesDescription: Supporting statement with description of digital practices.
 services:
   - name: Building Performance Analytics
     photoUrl: /uploads/service1.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Cost Estimating
     photoUrl: /uploads/service2.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Digital Practices
     photoUrl: /uploads/service3.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Instrumentation & Controls
     photoUrl: /uploads/service4.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Intelligent Buildings
     photoUrl: /uploads/service5.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Low Voltage Design
     photoUrl: /uploads/service6.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: MEP/FP Design
     photoUrl: /uploads/service7.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Pivotal Lighting Design
     photoUrl: /uploads/service8.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Planning
     photoUrl: /uploads/service9.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Process Engineering
     photoUrl: /uploads/service10.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
   - name: Security Consulting & Design
     photoUrl: /uploads/service11.jpg
-    permalink: #
+    permalink: /services/instrumentation-and-controls/
 
 locationsDescription: Supporting statement with description of digital practices. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
 
@@ -131,7 +131,7 @@ locations:
 </div>
 
 <!-- service section header -->
-<div class="row -halves vertical-pad background-white text-black">
+<div class="row -halves pad-vertical background-white text-black">
   <div class="row-block">
     <div class="module text-module">
       <h2 id="services" class="font-h1">Services</h2>
@@ -154,7 +154,7 @@ locations:
 </ul>
 
 <!-- location section header -->
-<div class="row -halves vertical-pad background-white text-black hr-top-black">
+<div class="row -halves pad-vertical background-white text-black hr-top-black">
   <div class="row-block">
     <div class="module text-module">
       <h2 id="locations" class="font-h1">Locations</h2>
